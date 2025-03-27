@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
 :root {
   --default: #ffffff;
   --prefersdark: #171717;
