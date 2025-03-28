@@ -2,6 +2,7 @@
 
 import ModalContainer from "@/components/partials/container/ModalContainer";
 import { useState } from "react";
+import SendOTPForm from "./SendOTPForm";
 
 function AuthForm() {
     const [step, setStep] = useState(1);
@@ -11,14 +12,18 @@ function AuthForm() {
   
     return (
       <div>
-        <button onClick={() => setIsOpen(true)}>Login</button>
+        
+        <button onClick={() => setIsOpen(true)} className="hover:text-white transition">Login</button>
+       
         {step === 1 && (
           <ModalContainer setIsOpen={setIsOpen} isOpen={isOpen}>
-            {/* <SendOTPForm
+            <SendOTPForm
               mobile={mobile}
               setMobile={setMobile}
               setStep={setStep}
-            /> */}
+              setIsOpen={setIsOpen}
+              isOpen={isOpen}
+            />
           </ModalContainer>
         )}
         {step === 2 && (
