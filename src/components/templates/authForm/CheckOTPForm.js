@@ -7,31 +7,7 @@ import OtpInput from "react-otp-input";
 function CheckOTPForm({ mobile, setStep, setIsOpen }) {
   const [code, setCode] = useState("");
 
-  // const { isPending, mutate } = useCheckOtp();
-
-  // const checkOtpHandler = (event) => {
-  //   event.preventDefault();
-
-  //   if (isPending) return;
-
-  //   mutate(
-  //     { mobile, code },
-  //     {
-  //       onSuccess: async (data) => {
-  //         setIsOpen(false);
-  //         setStep(1);
-  //       },
-  //       onError: (error) => {
-  //         console.log(error);
-  //       },
-  //     }
-  //   );
-  // };
-
-  // const changeHandler = (otp) => {
-  //   setCode(otp);
-  // };
-
+ 
   return (
     <div className="flex flex-col w-[358px] h-[362px] bg-white rounded-[20px] shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] p-6">
     <h4 className="text-xl font-bold text-center">Please, Enter Your Code</h4>

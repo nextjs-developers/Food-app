@@ -1,41 +1,16 @@
-"use client";
 
 import { ImCross } from "react-icons/im";
 
 function SendOTPForm({ mobile, setMobile, setStep, setIsOpen, isOpen }) {
-  console.log(isOpen);
-  // const [error, setError] = useState("");
 
-  // const { isPending, mutate } = useSendOtp();
-
-  // const sendOtpHandler = (event) => {
-  //   event.preventDefault();
-
-  //   if (isPending) return;
-  //   if (!isValidMobile(mobile)) return setError("شماره معتبر وارد کنید!");
-  //   setError("");
-
-  //   mutate(
-  //     { mobile },
-  //     {
-  //       onSuccess: (data) => {
-  //         toast.success(data?.data?.message);
-  //         toast(data?.data?.code);
-  //         setStep(2);
-  //       },
-  //       onError: (error) => {
-  //         console.log(error);
-  //       },
-  //     }
-  //   );
-  // };
-
+  
   return (
-    <div className="card w-96 bg-base-100 shadow-sm">
+    <div className="md:card md:w-[392px] md:h-[302px] md:bg-base-100 md:shadow-sm bg-base-100 w-full">
       <div className="card-body">
-        <button onClick={() => setIsOpen(false)}>
-          <ImCross />
-        </button>
+      <button onClick={()=>setIsOpen(false)}>
+      <ImCross />
+
+      </button>
         <h2 className="card-title justify-center text-2xl font-bold">
           Login Form
         </h2>
