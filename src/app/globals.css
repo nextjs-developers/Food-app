@@ -2,8 +2,8 @@
 @plugin "daisyui";
 
 :root {
-  --default: #ffffff;
-  --prefersdark: #171717;
+  --Primary: #417F56;
+  --bg-light:#E5F2E9; 
 }
 @plugin "daisyui" {
   themes: light var(--default), dark var(--prefersdark);
@@ -16,8 +16,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --default: #0a0a0a;
-    --prefersdark: #ededed;
+    --Primary: #417F56;
+--bg-light:#E5F2E9;
   }
 }
 

@@ -1,20 +1,17 @@
 "use client";
-
+import { useEffect, useRef, useState } from 'react'
 import ModalContainer from "@/components/partials/container/ModalContainer";
-import { useState } from "react";
 import SendOTPForm from "./SendOTPForm";
 
-function AuthForm() {
+function AuthForm(isOpen,setIsOpen,refrence) {
     const [step, setStep] = useState(1);
     const [mobile, setMobile] = useState("");
-    const [isOpen, setIsOpen] = useState(false);
-  
+   
   
     return (
       <div>
         
-        <button onClick={() => setIsOpen(true)} className="hover:text-white transition">Login</button>
-       
+       <button onClick={()=>setIsOpen(true)}>login</button>
         {step === 1 && (
           <ModalContainer setIsOpen={setIsOpen} isOpen={isOpen}>
             <SendOTPForm
@@ -23,6 +20,7 @@ function AuthForm() {
               setStep={setStep}
               setIsOpen={setIsOpen}
               isOpen={isOpen}
+              refrence={refrence}
             />
           </ModalContainer>
         )}

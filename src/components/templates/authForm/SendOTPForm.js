@@ -1,22 +1,25 @@
 
+import Image from "next/image";
 import { ImCross } from "react-icons/im";
 
-function SendOTPForm({ mobile, setMobile, setStep, setIsOpen, isOpen }) {
+function SendOTPForm({ mobile, setMobile, setStep, setIsOpen, isOpen,refrence }) {
 
   
   return (
     <div className="md:card md:w-[392px] md:h-[302px] md:bg-base-100 md:shadow-sm bg-base-100 w-full">
-      <div className="card-body">
-      <button onClick={()=>setIsOpen(false)}>
-      <ImCross />
+      <div className="card-body" ref={refrence} >
+      <button onClick={()=>setIsOpen(false)} >
+      <ImCross className="text-gray-500"/>
 
       </button>
-        <h2 className="card-title justify-center text-2xl font-bold">
-          Login Form
-        </h2>
-        <form className="flex flex-col gap-4 mt-4">
+      <div className="my-15px">
+      <Image src="/images/mehmoni.png" width={153} height={22} alt="mehmoni-logo" className="hidden md:block flex justify-center align-center m-auto "/>
+      <Image src="/images/mehmoni-mobile.png" width={162} height={92} alt="mehmoni-logo" className="md:hidden block my-10px flex justify-center align-center m-auto "/>
+      </div>
+        <form className="flex flex-col gap-4 mt-4 text-black">
+          <h4 className="text-[#353535] font-normal text-center ">Login/Register</h4>
           <label className="label">
-            <span className="label-text">Please Enter Your Mobile Phone</span>
+            <span className="label-text text-[12px] text-[#717171]  text-center m-auto"> Enter Your Mobile Phone</span>
           </label>
           <input
             type="text"
