@@ -90,17 +90,19 @@ const Slider = () => {
       </div>
 
       {/* Indicators */}
-      <div className="flex justify-center mt-4 gap-2 z-[20]    absolute left-1/2 bottom-0 w-[100px] h-[30px] -translate-x-1/2">
+      <div className=" mt-4 gap-2   absolute left-1/2 bottom-0  -translate-x-1/2">
+        <div className="bg-[url('/icons/rec-2.png')]  bg-cover w-[154px] h-[33px] flex justify-center bg-center bg-cover " >
+
         {images.map((_, index) => (
           <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`h-[10px] w-[10px] mt-2 rounded-full bg-[url("/icons/rec-2.png")] bg-cover  bg-center  rounded-btn transition-all duration-500 z-[30] ${
-              index === currentIndex ? "bg-[#417F56]" : "bg-base-300"
-            }`}
+          key={index}
+          onClick={() => setCurrentIndex(index)}
+          className={`h-[10px] w-[10px] mt-4 mr-2 rounded-full bg-cover  rounded-btn transition-all duration-500 z-[30] 
+            ${index === currentIndex ? "bg-[#417F56]" : "bg-base-300"}`}
             aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+            />
+          ))}
+          </div>
       </div>
     </div>
   );
