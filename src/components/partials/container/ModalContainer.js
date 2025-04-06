@@ -1,6 +1,4 @@
-function ModalContainer({ children, isOpen, setIsOpen }) {
-  if (!isOpen) return null;
-
+function ModalContainer({ children }) {
   return (
     <div className="modal modal-open fixed inset-0 z-10 bg-base-100">
       <div className="md:modal-backdrop md:bg-black/20 md:backdrop-blur-sm "></div>

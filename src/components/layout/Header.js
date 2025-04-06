@@ -8,19 +8,7 @@ import Image from "next/image";
 import Slider from "../module/Slider";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const ref = useRef();
-  useEffect(() => {
-    const close = (event) => {
-      if (!ref.current?.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("click", close);
-    return () => {
-      document.removeEventListener("click", close);
-    };
-  }, [isOpen]);
+
 
   return (
     <>
@@ -41,14 +29,12 @@ const Header = () => {
           </div>
           <div
             className="btn bg-[#E5F2E9] text-[#417F56] hover:bg-[#417F56] hover:text-white transition md:w-[100px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center "
-            onClick={() => setIsOpen(true)}
+           
           >
-            Login
+           <AuthForm/>
           </div>
         </div>
-        {isOpen && (
-          <AuthForm isOpen={isOpen} setIsOpen={setIsOpen} refrence={ref} />
-        )}
+    
       </div>
       <Slider />
     </>
