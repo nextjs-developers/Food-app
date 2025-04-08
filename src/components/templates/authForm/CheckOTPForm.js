@@ -1,12 +1,22 @@
 "use client";
 
+import Timer from "@/components/module/element/Timer";
 import { useCheckOtp } from "@/core/services/mutations";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ImCross } from "react-icons/im";
 import OtpInput from "react-otp-input";
 
 function CheckOTPForm({ phone, setStep, setIsOpen }) {
   const [otp, setOtp] = useState("");
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+  useEffect(() => {
+  
+      setMinutes(1);
+      setSeconds(59);
+   
+  }, [minutes , seconds]);
   const { isPending, mutate } = useCheckOtp();
 
   const checkOtpHandler = (event) => {
@@ -31,11 +41,11 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
     setCode(otp);
   };
   return (
-    <div className="md:card md:w-[392px] md:h-[302px] md:bg-base-100 md:shadow-sm bg-base-100 w-full">
+    <div className="md:card md:w-[392px] md:h-[370px] md:bg-base-100 md:shadow-sm bg-base-100 w-full">
       <div className="card-body">
-      <button onClick={()=>setIsOpen(false)}>
-            <ImCross className="text-gray-500"/>
-          </button>
+        <button onClick={() => setIsOpen(false)}>
+          <ImCross className="text-gray-500" />
+        </button>
         <div className="my-15px">
           <Image
             src="/images/mehmoni.png"
@@ -69,16 +79,31 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
               value={otp}
               onChange={setOtp}
               numInputs={5}
-              renderSeparator={<span>-</span>}
+              renderSeparator={<span> </span>}
               renderInput={(props) => <input {...props} />}
-            
               inputStyle={{
                 border: "1px solid silver",
                 borderRadius: "5px",
                 width: "49px",
                 height: "45px",
                 marginRight: "5px",
+                margin: "0 8px",
               }}
+            />
+          </div>
+          <div className="flex justify-center w-full items-center ">
+            <p
+              className="cursor-pointer dark:text-white hover:opacity-50 transition text-gray-500 "
+              onClick={() => setStep(1)}
+            >
+              Edit Mobile
+            </p>
+            <Timer
+              phone={phone}
+              minutes={minutes}
+              setMinutes={setMinutes}
+              seconds={seconds}
+              setSeconds={setSeconds}
             />
           </div>
           <button className="btn bg-[#417F56] mt-4 text-white" type="submit">

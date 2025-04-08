@@ -31,7 +31,7 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
   };
   return (
     <>
-      <div className="md:card md:w-[392px] md:h-[302px] md:bg-base-100 md:shadow-sm bg-base-100 w-full ">
+      <div className="md:card md:w-[392px] md:h-[370px] md:bg-base-100 md:shadow-sm bg-base-100 w-full ">
         <div className="card-body">
         <button onClick={()=>setIsOpen(false)}>
             <ImCross/>
@@ -70,10 +70,15 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
               className="input input-bordered w-full outline-none focus:outline:none hover:outline-none dark:text-white dark:border-white"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              required
             />
-            <button className="btn bg-[#417F56] mt-4 text-white" type="submit">
+           
+            <button className="btn bg-[#417F56] mt-4 text-white my-0" type="submit">
               Send Code
             </button>
+            <p className="text-gary-500 text-[10px] text-center dark:text-white">
+          Becoming a member of Mehmoni constitutes acceptance of the rules.</p>
+
           </form>
         </div>
       </div>
