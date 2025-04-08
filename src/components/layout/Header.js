@@ -10,7 +10,7 @@ import Slider from "../module/Slider";
 const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
   
 
   return (

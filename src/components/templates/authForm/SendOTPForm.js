@@ -19,9 +19,9 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
       { phone },
       {
         onSuccess: (data) => {
+          toast(`otp code: ${data?.data?.otp}`);
           toast.success(data?.data?.message);
-          toast(data?.data?.code);
-          setStep(2);
+          setStep(2);     
         },
         onError: (error) => {
           toast.error(error.message);

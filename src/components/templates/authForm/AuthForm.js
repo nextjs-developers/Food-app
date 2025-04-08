@@ -13,7 +13,7 @@ function AuthForm({isOpen , setIsOpen , step ,setStep}) {
           <SendOTPForm phone={phone} setIsOpen={setIsOpen} setPhone={setPhone} setStep={setStep} />
         ) : (
           <CheckOTPForm
-            mobile={phone}
+            phone={phone}
             setStep={setStep}
             setIsOpen={setIsOpen}
           />

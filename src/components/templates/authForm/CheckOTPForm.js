@@ -21,13 +21,12 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
 
   const checkOtpHandler = (event) => {
     event.preventDefault();
-
     if (isPending) return;
-
     mutate(
-      { mobile, code },
+      {phone, otp},
       {
         onSuccess: async (data) => {
+          console.log(data)
           setIsOpen(false);
           setStep(1);
         },

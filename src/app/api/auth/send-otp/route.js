@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createConnection } from "@/core/lib/db";
+import { query } from "@/core/lib/db";
 import { randomInt } from "crypto";
 
 export async function POST(req) {
@@ -14,12 +14,10 @@ export async function POST(req) {
 
     const otp = randomInt(10000, 99999);
     const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
-
-    const connection = await createConnection();
-
-    await connection.execute("DELETE FROM otps WHERE phone = ?", [phone]);
-
-    await connection.execute(
+    //If the phone number exists in the table, delete it.
+    await query("DELETE FROM otps WHERE phone = ?", [phone]);
+   //insert data in otps table
+    await query(
       "INSERT INTO otps (phone, otp, expires_at) VALUES (?, ?, ?)",
       [phone, otp, expiresAt]
     );
