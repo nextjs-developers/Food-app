@@ -42,14 +42,14 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen, isOpen }) {
               width={153}
               height={22}
               alt="mehmoni-logo"
-              className="hidden md:block flex justify-center align-center m-auto "
+              className="hidden md:flex justify-center align-center m-auto "
             />
             <Image
               src="/images/mehmoni-mobile.png"
               width={162}
               height={92}
               alt="mehmoni-logo"
-              className="md:hidden block my-10px flex justify-center align-center m-auto "
+              className="md:hidden  my-10px flex justify-center align-center m-auto "
             />
           </div>
           <form

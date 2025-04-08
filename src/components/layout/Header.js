@@ -11,8 +11,8 @@ const Header = () => {
 
 
   return (
-    <>
-      <div className="navbar flex justify-between items-center md:w-[calc(100%-8rem)] w-[calc(100%-2rem)]  h-[64px] md:h-[115px] mx-auto bg-white">
+    <div className="w-full">
+      <div className="bg-transparent dark:text-white  navbar flex justify-between items-center md:w-[calc(100%-8rem)] w-[calc(100%-2rem)]  h-[64px] md:h-[115px] mx-auto ">
         <HeaderNavbar />
 
         <div className="flex items-center justify-between gap-[8px]">
@@ -37,7 +37,7 @@ const Header = () => {
     
       </div>
       <Slider />
-    </>
+    </div>
   );
 };
 
