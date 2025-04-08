@@ -2,13 +2,16 @@
 
 import AuthForm from "../templates/authForm/AuthForm";
 import HeaderNavbar from "../module/HeaderNavbar";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Image from "next/image";
 import Slider from "../module/Slider";
 
 const Header = () => {
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [step, setStep] = useState(1);
+  
 
   return (
     <div className="w-full">
@@ -31,12 +34,13 @@ const Header = () => {
             className="btn bg-[#E5F2E9] text-[#417F56] hover:bg-[#417F56] hover:text-white transition md:w-[100px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center "
            
           >
-           <AuthForm/>
+      <button onClick={()=>setIsOpen(true)}> login</button>  
           </div>
         </div>
     
       </div>
       <Slider />
+      {isOpen && <AuthForm isOpen={isOpen} setIsOpen={setIsOpen} step={step}  setStep={setStep}/>}
     </div>
   );
 };

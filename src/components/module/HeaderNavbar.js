@@ -95,17 +95,17 @@ function HeaderNavbar() {
 
       <div className="navbar-center hidden md:flex md:-flex-1">
         <ul className="menu menu-horizontal">
-          <li>
+          <li className="hover:border-b hover:border-[#417F56]">
             <Link href="/contactus">Contact Us</Link>
           </li>
-          <li>
+          <li className="hover:border-b hover:border-[#417F56]">
             <Link href="/aboutus">About Us</Link>
           </li>
-          <li>
+          <li className="hover:border-b hover:border-[#417F56]">
             <Link href="/representation">Representation Failure</Link>
           </li>
 
-          <li>
+          <li >
             <details>
               <summary className="hover:bg-transparent z-[30] focus:bg-transparent hover:border-b hover:border-[#417F56] hover:text-[#417F56] transition">
                 Menu
@@ -147,9 +147,9 @@ function HeaderNavbar() {
               </ul>
             </details>
           </li>
-          <li>
+          <li className="hover:border-b hover:border-[#417F56]"> 
             <Link href="/">HomePage</Link>
-          </li>
+          </li> 
         </ul>
       </div>
     </>

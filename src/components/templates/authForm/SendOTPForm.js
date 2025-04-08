@@ -5,7 +5,7 @@ import { ImCross } from "react-icons/im";
 import { useSendOtp } from "@/core/services/mutations";
 import { isValidMobile } from "@/core/utils/validation";
 
-function SendOTPForm({ phone, setPhone, setStep, setIsOpen, isOpen }) {
+function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
   const { isPending, mutate } = useSendOtp();
 
   const sendOtpHandler = (event) => {
@@ -33,7 +33,7 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen, isOpen }) {
     <>
       <div className="md:card md:w-[392px] md:h-[302px] md:bg-base-100 md:shadow-sm bg-base-100 w-full ">
         <div className="card-body">
-          <button onClick={()=>setIsOpen(false)}>
+        <button onClick={()=>setIsOpen(false)}>
             <ImCross/>
           </button>
           <div className="my-15px">
@@ -56,18 +56,18 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen, isOpen }) {
             className="flex flex-col gap-4 mt-4 text-black"
             onSubmit={sendOtpHandler}
           >
-            <h4 className="text-[#353535] font-normal text-center ">
+            <h4 className="text-[#353535] font-normal text-center dark:text-white">
               Login/Register
             </h4>
             <label className="label">
-              <span className="label-text text-[12px] text-[#717171]  text-center m-auto">
+              <span className="label-text text-[12px] text-[#717171]  text-center m-auto dark:text-white">
                 Enter Your Mobile Phone
               </span>
             </label>
             <input
               type="text"
               placeholder="+98123****"
-              className="input input-bordered w-full outline-none focus:outline:none hover:outline-none"
+              className="input input-bordered w-full outline-none focus:outline:none hover:outline-none dark:text-white dark:border-white"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />

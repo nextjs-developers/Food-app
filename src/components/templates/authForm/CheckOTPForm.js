@@ -56,11 +56,11 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
           className="flex flex-col gap-4 mt-4 text-black"
           onSubmit={checkOtpHandler}
         >
-          <h4 className="text-[#353535] font-normal text-center ">
+          <h4 className="text-[#353535] font-normal text-center dark:text-white ">
             Verification Code
           </h4>
           <label className="label">
-            <span className="label-text text-[12px] text-[#717171]  text-center m-auto">
+            <span className="label-text text-[12px] text-[#717171] text-center m-auto dark:text-white">
               A five-digit verification code was sent to the {phone}.
             </span>
           </label>
@@ -71,6 +71,7 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
               numInputs={5}
               renderSeparator={<span>-</span>}
               renderInput={(props) => <input {...props} />}
+            
               inputStyle={{
                 border: "1px solid silver",
                 borderRadius: "5px",
