@@ -1,3 +1,6 @@
+import TanstackQueryProvider from "@/components/partials/provider/TanstackQueryProvider";
+import { Toaster } from "react-hot-toast";
+
 import Layout from "@/components/layout/Layout";
 import "./globals.css";
 
@@ -10,9 +13,13 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<Layout>
+			<TanstackQueryProvider>
+			<Layout>
 				{children}
 				</Layout>
+			</TanstackQueryProvider>
+			<Toaster/>
+				
 				
 				</body>
 		</html>
