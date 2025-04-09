@@ -6,12 +6,14 @@ import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Image from "next/image";
 import Slider from "../module/Slider";
+import { getRefreshToken } from "@/core/lib/token";
+import Link from "next/link";
 
 const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(1);
-  
+  const token = getRefreshToken();
 
   return (
     <div className="w-full">
@@ -34,7 +36,7 @@ const Header = () => {
             className="btn bg-[#E5F2E9] text-[#417F56] hover:bg-[#417F56] hover:text-white transition md:w-[100px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center "
            
           >
-      <button onClick={()=>setIsOpen(true)}> login</button>  
+     {token? ( <button><Link href="/dashboard">Account</Link> </button>  ):( <button onClick={()=>setIsOpen(true)}> login</button>  )}
           </div>
         </div>
     

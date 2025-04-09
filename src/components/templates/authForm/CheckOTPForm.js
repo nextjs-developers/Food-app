@@ -1,6 +1,7 @@
 "use client";
 
 import Timer from "@/components/module/element/Timer";
+import { setAccessToken, setRefreshToken } from "@/core/lib/token";
 import { useCheckOtp } from "@/core/services/mutations";
 import Image from "next/image";
 import { useState } from "react";
@@ -21,9 +22,10 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
       { phone, otp },
       {
         onSuccess: async (data) => {
-          console.log(data);
           setIsOpen(false);
           setStep(1);
+          setRefreshToken("refreshToken",data?.data?.refreshToken, 365);
+          setAccessToken("accessToken", data?.data?.accessToken, 30);
         },
         onError: (error) => {
           console.log(error);
