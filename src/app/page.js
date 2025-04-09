@@ -1,5 +1,11 @@
+import HomePage from "@/components/templates/HomePage";
+
 export default function Home() {
   return (
-    <h1 className="text-red-400">hi</h1>
+    <div>
+      <HomePage/>
+    </div>
+
+    
   );
 }

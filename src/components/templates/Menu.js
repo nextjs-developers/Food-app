@@ -9,10 +9,10 @@ const RestaurantMenu = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-10 justify-center">
 
 <div className="relative text-center ">
-          <div className="absolute inset-3 bg-green-700 rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
+          <div className="absolute inset-3 bg-[#417F56] rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
           <div className="relative z-10">
             <img
-              src="/image/image (2).svg"
+              src="/images/image (2).svg"
               alt="Main course"
               width={290}
               height={290}
@@ -25,10 +25,10 @@ const RestaurantMenu = () => {
         </div>
 
         <div className="relative text-center ">
-          <div className="absolute inset-3 bg-green-700 rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
+          <div className="absolute inset-3 bg-[#417F56] rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
           <div className="relative z-10">
             <img
-              src="/image/image (1).svg"
+              src="/images/image (1).svg"
               alt="Appetizers"
               width={290}
               height={290}
@@ -41,10 +41,10 @@ const RestaurantMenu = () => {
         </div>
 
         <div className="relative text-center ">
-          <div className="absolute inset-3 bg-green-700 rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
+          <div className="absolute inset-3 bg-[#417F56] rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
           <div className="relative z-10">
             <img
-              src="/image/image (3).svg"
+              src="/images/image (3).svg"
               alt="Desserts"
               width={290}
               height={290}
@@ -57,10 +57,10 @@ const RestaurantMenu = () => {
         </div>
  
 <div className="relative text-center ">
-          <div className="absolute inset-3 bg-green-700 rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
+          <div className="absolute inset-3 bg-[#417F56] rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
           <div className="relative z-10">
             <img
-              src="/image/image (5).svg"
+              src="/images/image (5).svg"
               alt="Drinks"
               width={240}
               height={240}
