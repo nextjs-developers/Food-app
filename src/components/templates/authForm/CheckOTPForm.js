@@ -3,30 +3,25 @@
 import Timer from "@/components/module/element/Timer";
 import { useCheckOtp } from "@/core/services/mutations";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ImCross } from "react-icons/im";
 import OtpInput from "react-otp-input";
 
 function CheckOTPForm({ phone, setStep, setIsOpen }) {
   const [otp, setOtp] = useState("");
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-  useEffect(() => {
-  
-      setMinutes(1);
-      setSeconds(59);
-   
-  }, [minutes , seconds]);
+
+
   const { isPending, mutate } = useCheckOtp();
 
   const checkOtpHandler = (event) => {
     event.preventDefault();
+
     if (isPending) return;
     mutate(
-      {phone, otp},
+      { phone, otp },
       {
         onSuccess: async (data) => {
-          console.log(data)
+          console.log(data);
           setIsOpen(false);
           setStep(1);
         },
@@ -36,9 +31,7 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
       }
     );
   };
-  const changeHandler = (otp) => {
-    setCode(otp);
-  };
+
   return (
     <div className="md:card md:w-[392px] md:h-[370px] md:bg-base-100 md:shadow-sm bg-base-100 w-full">
       <div className="card-body">
@@ -61,10 +54,7 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
             className="md:hidden my-10px flex justify-center align-center m-auto "
           />
         </div>
-        <form
-          className="flex flex-col gap-4 mt-4 text-black"
-          onSubmit={checkOtpHandler}
-        >
+        <form className="flex flex-col gap-4 mt-4 text-black" onSubmit={checkOtpHandler}>
           <h4 className="text-[#353535] font-normal text-center dark:text-white ">
             Verification Code
           </h4>
@@ -90,6 +80,7 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
               }}
             />
           </div>
+          
           <div className="flex justify-center w-full items-center ">
             <p
               className="cursor-pointer dark:text-white hover:opacity-50 transition text-gray-500 "
@@ -97,13 +88,7 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
             >
               Edit Mobile
             </p>
-            <Timer
-              phone={phone}
-              minutes={minutes}
-              setMinutes={setMinutes}
-              seconds={seconds}
-              setSeconds={setSeconds}
-            />
+            <Timer phone={phone} />
           </div>
           <button className="btn bg-[#417F56] mt-4 text-white" type="submit">
             Confirmation
