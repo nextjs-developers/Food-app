@@ -12,7 +12,6 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   useEffect(() => {
-  
       setMinutes(1);
       setSeconds(59);
    
