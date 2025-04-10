@@ -20,6 +20,11 @@
 --bg-light:#E5F2E9;
   }
 }
+.menu{
+  --menu-active-fg: none;
+  --menu-active-bg: none;
+}
+
 
 body {
   background: var(--default);

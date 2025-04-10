@@ -1,72 +1,45 @@
 import { useSendOtp } from "@/core/services/mutations";
 import { useState, useEffect } from "react";
 
-const Timer = (phone ,  minutes,
-    setMinutes,
-    seconds,
-    setSeconds) => {
- 
-  const { mutate } = useSendOtp();
+const Timer = ({phone}) => {
+  const [timer, setTimer] = useState(120);
+  const [isTimerActive, setIsTimerActive] = useState(true);
+  const { mutate: sendOtp } = useSendOtp();
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (seconds > 0) {
-        setSeconds(seconds - 1);
-      }
+    let interval;
 
-      if (seconds === 0) {
-        if (minutes === 0) {
-          clearInterval(interval);
-        } else {
-          setSeconds(59);
-          setMinutes(minutes - 1);
-        }
-      }
-    }, 1000);
+    if (isTimerActive && timer > 0) {
+      interval = setInterval(() => {
+        setTimer((prevTimer) => prevTimer - 1);
+      }, 1000);
+    } else if (timer === 0) {
+      setIsTimerActive(false);
+    }
 
-    return () => {
-      clearInterval(interval);
-    };
-  });
+    return () => clearInterval(interval);
+  }, [timer, isTimerActive]);
 
-
-  const resendOTP = () => {
-    setMinutes(1);
-    setSeconds(59);
-    mutate(
-        { phone },
-        {
-          onSuccess: (data) => {
-            toast.success(data?.data?.message);
-            toast(data?.data?.code);
-          
-          },
-          onError: (error) => {
-            toast.error(error.message);
-          },
-        }
-      );
+  const formatTime = (seconds) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
   };
 
+  const handleResendOtp = () => {
+    sendOtp({ phone });
+    setTimer(120);
+    setIsTimerActive(true);
+  };
   return (
-    <div className="countdown-text">
-      {seconds > 0 || minutes > 0 ? (
-        <p>
-          Time Remaining: {minutes < 10 ? `0${minutes}` : minutes}:
-          {seconds < 10 ? `0${seconds}` : seconds}
-        </p>
+    <div>
+      {isTimerActive ? (
+        <p className="text-gray-500 dark:text-white">time remaining : {formatTime(timer)} </p>
       ) : (
-        <p className="dark:text-white">Didn't recieve code?</p>
+        <p> code expired</p>
       )}
 
-      <button
-        disabled={seconds > 0 || minutes > 0}
-        style={{
-          color: seconds > 0 || minutes > 0 ? "#DFE3E8" : "#FF5630",
-        }}
-        onClick={resendOTP}
-      >
-        Resend code
-      </button>
+      {!isTimerActive && <button className="text-red-400 " onClick={handleResendOtp}>Resend Code</button>}
     </div>
   );
 };

@@ -3,7 +3,10 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 import { ImCross } from "react-icons/im";
 import { useSendOtp } from "@/core/services/mutations";
-import { isValidMobile } from "@/core/utils/validation";
+import { ValidationPhone } from "@/components/module/element/ValidationPhone";
+
+
+
 
 function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
   const { isPending, mutate } = useSendOtp();
@@ -12,8 +15,7 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
     event.preventDefault();
 
     if (isPending) return;
-    if (!isValidMobile(phone))
-      return toast.error("Please Enter The Valid Number!");
+  
 
     mutate(
       { phone },
@@ -64,15 +66,7 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
                 Enter Your Mobile Phone
               </span>
             </label>
-            <input
-              type="text"
-              placeholder="+98123****"
-              className="input input-bordered w-full outline-none focus:outline:none hover:outline-none dark:text-white dark:border-white"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            />
-           
+           <ValidationPhone phone={phone} setPhone={setPhone}/>
             <button className="btn bg-[#417F56] mt-4 text-white my-0" type="submit">
               Send Code
             </button>

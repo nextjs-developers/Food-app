@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 export async function POST(req) {
 	try {
 		const { phone, otp } = await req.json();
+		
 		if (!phone || !otp) {
 			return NextResponse.json(
 				{ message: "Phone and OTP are required" },

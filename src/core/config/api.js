@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { getCookie, setCookie } from "../utils/cookie";
+import { getAccessToken, getRefreshToken, setAccessToken, setRefreshToken } from "../lib/token";
 
 const api = axios.create({
   baseURL: "http://localhost:3000/",
@@ -11,7 +11,7 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (request) => {
-    const accessToken = getCookie("accessToken");
+    const accessToken = getAccessToken("accessToken");
     if (accessToken) {
       request.headers["Authorization"] = `Bearer ${accessToken}`;
     }
@@ -33,12 +33,12 @@ api.interceptors.response.use(
 
       const res = await getNewTokens();
       if (res?.response?.status === 201) {
-        setCookie("accessToken", res?.response?.data.accessToken, 30);
-        setCookie("refreshToken", res?.response?.data.refreshToken, 360);
+        setAccessToken("accessToken", res?.response?.data.accessToken, 30);
+        setRefreshToken("refreshToken", res?.response?.data.refreshToken, 360);
         return api(orginialRequest);
       } else {
-        setCookie("accessToken", "", 0);
-        setCookie("refreshToken", "", 0);
+        setAccessToken("accessToken", "", 0);
+        setRefreshToken("refreshToken", "", 0);
       }
     }
     return Promise.reject(error.response.data);
@@ -48,7 +48,7 @@ api.interceptors.response.use(
 export default api;
 
 const getNewTokens = async () => {
-  const refreshToken = getCookie("refreshToken");
+  const refreshToken = getRefreshToken("refreshToken");
   if (!refreshToken) return;
   try {
     const response = await axios.post(
