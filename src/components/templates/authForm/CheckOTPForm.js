@@ -4,7 +4,7 @@ import Timer from "@/components/module/element/Timer";
 import { setAccessToken, setRefreshToken } from "@/core/lib/token";
 import { useCheckOtp } from "@/core/services/mutations";
 import Image from "next/image";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import { ImCross } from "react-icons/im";
 import OtpInput from "react-otp-input";
 
@@ -31,8 +31,9 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
         onSuccess: async (data) => {
           setIsOpen(false);
           setStep(1);
-          setRefreshToken("refreshToken",data?.data?.refreshToken, 365);
-          setAccessToken("accessToken", data?.data?.accessToken, 30);
+          console.log(data)
+          setRefreshToken(data?.data?.data?.refreshToken);
+          setAccessToken(data?.data?.data?.accessToken);
         },
         onError: (error) => {
           console.log(error);
