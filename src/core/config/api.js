@@ -1,9 +1,8 @@
 import axios from "axios";
-
 import { getAccessToken, getRefreshToken, setAccessToken, setRefreshToken } from "../lib/token";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "http://localhost:3000/api/",
   headers: {
     "Content-Type": "application/json",
   },
