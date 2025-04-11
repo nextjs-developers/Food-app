@@ -36,7 +36,7 @@ const Header = () => {
             className="btn bg-[#E5F2E9] text-[#417F56] hover:bg-[#417F56] hover:text-white transition md:w-[100px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center "
            
           >
-     {token? ( <button><Link href="/dashboard">Account</Link> </button>  ):( <button onClick={()=>setIsOpen(true)}> login</button>  )}
+        {token? ( <button><Link href="/dashboard">Account</Link> </button>  ):( <button onClick={()=>setIsOpen(true)}> login</button>  )}
           </div>
         </div>
     
