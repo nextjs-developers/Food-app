@@ -7,7 +7,7 @@ import {
 } from "../lib/token";
 
 const api = axios.create({
-  baseURL: `process.env.BASE_URL${"api/"}`,
+  baseURL: `${process.env.BASE_URL}api/`,
   headers: {
     "Content-Type": "application/json",
   },
