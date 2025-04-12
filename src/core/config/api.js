@@ -7,7 +7,7 @@ import {
 } from "../lib/token";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/api/",
+  baseURL: process.env.BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
@@ -60,7 +60,7 @@ const getNewTokens = async () => {
 
   try {
     const response = await axios.post(
-      `http://localhost:3000/api/auth/refresh-token`,
+      `${process.env.BASE_URL}auth/refresh-token`,
       { refreshToken },
       {
         headers: { "Content-Type": "application/json" },
