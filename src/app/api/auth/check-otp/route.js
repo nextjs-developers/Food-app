@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 export async function POST(req) {
 	try {
 		const { phone, otp } = await req.json();
-		
+
 		if (!phone || !otp) {
 			return NextResponse.json(
 				{ message: "Phone and OTP are required" },
@@ -24,23 +24,34 @@ export async function POST(req) {
 				{ status: 400 }
 			);
 		}
-   
+
 		await query("DELETE FROM otps WHERE phone = ?", [phone]);
 
-    const accessToken = jwt.sign(
-      {phone},
-      process.env.JWT_SECRET,
-      { expiresIn: "6h" }
-    );
-    const refreshToken = jwt.sign({ phone }, process.env.JWT_SECRET, {
-      expiresIn: "7d",
-    });
-    await query(
-      "INSERT INTO users (access_token, refresh_token, phone) VALUES (?, ?, ?)",
-      [accessToken, refreshToken, phone]
-    );
+		const accessToken = jwt.sign({ phone }, process.env.JWT_SECRET, {
+			expiresIn: "6h",
+		});
+		const refreshToken = jwt.sign({ phone }, process.env.JWT_SECRET, {
+			expiresIn: "7d",
+		});
+		const userExists = await query("SELECT * FROM users WHERE phone = ?", [
+			phone,
+		]);
 
-		return NextResponse.json({ message: "OTP verified", data: {accessToken , refreshToken} });
+		if (userExists.length > 0) {
+			await query(
+				"UPDATE users SET access_token = ?, refresh_token = ? WHERE phone = ?",
+				[accessToken, refreshToken, phone]
+			);
+		} else {
+			await query(
+				"INSERT INTO users (access_token, refresh_token, phone) VALUES (?, ?, ?)",
+				[accessToken, refreshToken, phone]
+			);
+		}
+		return NextResponse.json({
+			message: "OTP verified",
+			data: { accessToken, refreshToken },
+		});
 	} catch (error) {
 		console.error("Database Error:", error);
 		return NextResponse.json(

@@ -16,7 +16,7 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
 
     if (isPending) return;
   
-
+    
     mutate(
       { phone },
       {

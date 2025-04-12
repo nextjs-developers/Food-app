@@ -1,5 +1,10 @@
 import axios from "axios";
-import { getAccessToken, getRefreshToken, setAccessToken, setRefreshToken } from "../lib/token";
+import {
+  getAccessToken,
+  getRefreshToken,
+  setAccessToken,
+  setRefreshToken,
+} from "../lib/token";
 
 const api = axios.create({
   baseURL: "http://localhost:3000/api/",
@@ -10,50 +15,55 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (request) => {
-    const accessToken = getAccessToken("accessToken");
+    const accessToken = getAccessToken();
     if (accessToken) {
       request.headers["Authorization"] = `Bearer ${accessToken}`;
     }
     return request;
   },
-  (error) => {
-    return Promise.reject(error);
-  }
+  (error) => Promise.reject(error)
 );
 
 api.interceptors.response.use(
-  (response) => {
-    return response;
-  },
+  (response) => response,
   async (error) => {
-    const orginialRequest = error.config;
-    if (error.response.status === 401 && !orginialRequest._retry) {
-      orginialRequest._retry = true;
+    const originalRequest = error.config;
 
-      const res = await getNewTokens();
-      if (res?.response?.status === 201) {
-        setAccessToken("accessToken", res?.response?.data.accessToken, 30);
-        setRefreshToken("refreshToken", res?.response?.data.refreshToken, 360);
-        return api(orginialRequest);
+    if (error.response?.status === 401 && !originalRequest._retry) {
+      originalRequest._retry = true;
+
+      const { response: refreshResponse } = await getNewTokens();
+
+      if (refreshResponse?.status === 200) {
+        const { accessToken, refreshToken } = refreshResponse.data.data;
+
+        setAccessToken(accessToken);
+        setRefreshToken(refreshToken);
+
+        originalRequest.headers["Authorization"] = `Bearer ${accessToken}`;
+        return api(originalRequest);
       } else {
-        setAccessToken("accessToken", "", 0);
-        setRefreshToken("refreshToken", "", 0);
+        setAccessToken("");
+        setRefreshToken("");
       }
     }
-    return Promise.reject(error.response.data);
+
+    return Promise.reject(error?.response?.data || error);
   }
 );
 
 export default api;
 
 const getNewTokens = async () => {
-  const refreshToken = getRefreshToken("refreshToken");
-  if (!refreshToken) return;
+  const refreshToken = getRefreshToken();
+  if (!refreshToken) return {};
+
   try {
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_BASE_URL}auth/refresh-token`,
+      `http://localhost:3000/api/auth/refresh-token`,
+      { refreshToken },
       {
-        refreshToken,
+        headers: { "Content-Type": "application/json" },
       }
     );
     return { response };
