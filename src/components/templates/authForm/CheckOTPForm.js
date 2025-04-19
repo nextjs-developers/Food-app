@@ -1,6 +1,6 @@
 "use client";
 
-import Timer from "@/components/module/element/Timer";
+import Timer from "@/components/module/authForm/Timer";
 import { setAccessToken, setRefreshToken } from "@/core/lib/token";
 import { useCheckOtp } from "@/core/services/mutations";
 import Image from "next/image";
@@ -26,14 +26,14 @@ function CheckOTPForm({ phone, setStep, setIsOpen }) {
 
     if (isPending) return;
     mutate(
-      { phone, otp },
+      { phone, code: otp },
       {
         onSuccess: async (data) => {
           setIsOpen(false);
           setStep(1);
           console.log(data)
-          setRefreshToken(data?.data?.data?.refreshToken);
-          setAccessToken(data?.data?.data?.accessToken);
+          setRefreshToken(data?.data?.refreshToken);
+          setAccessToken(data?.data?.accessToken);
         },
         onError: (error) => {
           console.log(error);

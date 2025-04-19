@@ -7,7 +7,7 @@ import {
 } from "../lib/token";
 
 const api = axios.create({
-  baseURL: `${process.env.BASE_URL}api/`,
+  baseURL: `https://tarkhineh-api.liara.run/`,
   headers: {
     "Content-Type": "application/json",
   },

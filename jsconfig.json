@@ -1,27 +1,26 @@
 {
-  "compilerOptions": {
-    "baseUrl":".",
-    "paths": {
-      "@/app/*" : ["src/app/*"],
-     "@/public/*" : ["public/*"], 
-     "@/images/*" : ["public/images/*"],
-     "@/icons/*" : ["public/icons/*"],
-     "@/core/*" : ["src/core/*"],
-     "@/services/*" : ["src/core/services/*"],
-     "@/config/*" : ["src/core/config/*"],
-     "@/utils/*" : ["src/core/utils/*"],
-     "@/lib/*" : ["src/core/lib/*"],
-     "@/components/*" : ["src/components/*"],
-     "@/layout/*" : ["src/components/layout/*"],
-     "@/module/*" : ["src/components/module/*"],
-     "@/element/*" : ["src/components/module/element/*"],
-     "@/templates/*" : ["src/components/templates/*"],
-     "@/authForm/*" : ["src/components/templates/authForm/*"], 
-     "@/atoms/*" : ["src/components/atoms/*"],
-     "@/partials/*" : ["src/components/partials/*"],
-     "@/container/*" : ["src/components/partials/container/*"],
-     "@/provider/*" : ["src/components/partials/provider/*"],
-   
-  }
-  }
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/app/*": ["src/app/*"],
+			"@/public/*": ["public/*"],
+			"@/images/*": ["public/images/*"],
+			"@/icons/*": ["public/icons/*"],
+			"@/core/*": ["src/core/*"],
+			"@/services/*": ["src/core/services/*"],
+			"@/config/*": ["src/core/config/*"],
+			"@/utils/*": ["src/core/utils/*"],
+			"@/lib/*": ["src/core/lib/*"],
+			"@/components/*": ["src/components/*"],
+			"@/layout/*": ["src/components/layout/*"],
+			"@/module/*": ["src/components/module/*"],
+			"@/element/*": ["src/components/module/element/*"],
+			"@/templates/*": ["src/components/templates/*"],
+			"@/authForm/*": ["src/components/templates/authForm/*"],
+			"@/atoms/*": ["src/components/atoms/*"],
+			"@/partials/*": ["src/components/partials/*"],
+			"@/container/*": ["src/components/container/*"],
+			"@/provider/*": ["src/components/provider/*"]
+		}
+	}
 }

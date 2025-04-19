@@ -3,7 +3,7 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 import { ImCross } from "react-icons/im";
 import { useSendOtp } from "@/core/services/mutations";
-import { ValidationPhone } from "@/components/module/element/ValidationPhone";
+import { ValidationPhone } from "@/components/module/authForm/ValidationPhone";
 
 
 
@@ -21,7 +21,7 @@ function SendOTPForm({ phone, setPhone, setStep, setIsOpen }) {
       { phone },
       {
         onSuccess: (data) => {
-          toast(`otp code: ${data?.data?.otp}`);
+          toast(`otp code: ${data?.data?.code}`);
           toast.success(data?.data?.message);
           setStep(2);     
         },

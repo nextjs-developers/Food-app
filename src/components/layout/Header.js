@@ -1,11 +1,11 @@
 "use client";
 
 import AuthForm from "../templates/authForm/AuthForm";
-import HeaderNavbar from "../module/HeaderNavbar";
+import HeaderNavbar from "../module/navbar/HeaderNavbar";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Image from "next/image";
-import Slider from "../module/Slider";
+import Slider from "../module/slider/Slider";
 import { getRefreshToken } from "@/core/lib/token";
 import Link from "next/link";
 

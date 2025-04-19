@@ -1,8 +1,10 @@
-import TanstackQueryProvider from "@/components/partials/provider/TanstackQueryProvider";
+import TanstackQueryProvider from "@/components/provider/TanstackQueryProvider";
 import { Toaster } from "react-hot-toast";
 
-import Layout from "@/components/layout/Layout";
+
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
 	title: "Mehmoni | Food Shop",
@@ -13,15 +15,13 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-			<TanstackQueryProvider>
-			<Layout>
-				{children}
-				</Layout>
-			</TanstackQueryProvider>
-			<Toaster/>
-				
-				
-				</body>
+				<TanstackQueryProvider>
+					<Header/>
+					{children}
+					<Footer/>
+				</TanstackQueryProvider>
+				<Toaster />
+			</body>
 		</html>
 	);
 }
