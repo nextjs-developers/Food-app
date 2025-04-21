@@ -15,17 +15,17 @@ function ImageSlider({ selectedImage, setIsOpen }) {
   };
 
   return (
-    <div className=" w-[100%] m-auto mt-4">
-      <div className=" h-96 rounded-0 group duration-300">
-        <div className="relative w-full h-full rounded-box overflow-hidden flex justify-center align-middle">
+    <div className="  m-auto mt-8">
+      <div className=" rounded-0 group duration-300">
+        <div className="relative rounded-box flex justify-center align-middle w-full h-full">
           <div className="relative ">
             <Image
               src={selectedImage[currentIndex]}
-              width={808}
-              height={441}
+           width={550}
+           height={150}
               alt={`Slide ${currentIndex + 1}`}
               priority
-              className="object-cover transition-opacity duration-500 "
+              className="object-contain transition-opacity duration-500 "
             />
             <button
               onClick={closeModal}
@@ -36,7 +36,7 @@ function ImageSlider({ selectedImage, setIsOpen }) {
           </div>
 
           <div className="absolute bottom-0">
-            <div className="carousel flex justify-center align-middle bg-transparent carousel-center max-w-full p-4 space-x-4  rounded-box">
+            <div className=" carousel flex justify-center align-middle bg-transparent carousel-center max-w-full p-4 space-x-4  rounded-box">
               {selectedImage.map((image, index) => (
                 <div
                   key={index}
