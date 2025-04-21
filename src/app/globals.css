@@ -50,7 +50,8 @@
 
   --bg-light: #e5f2e9;
 
-   
+box-shadow:0px 0px 0px 0px #0000001A,0px 3px 6px 0px #0000001A,0px 11px 11px 0px #00000017,0px 24px 14px 0px #0000000D,0px 42px 17px 0px #00000003,0px 66px 18px 0px #00000000;
+
 }
 @plugin "daisyui" {
   themes: light var(--default), dark var(--prefersdark);
@@ -76,5 +77,7 @@ body {
   background: var(--default);
   color: var(--prefersdark);
 font-family: "Roboto-Medium";
+max-width: 1400px;
+margin: auto;
 }
 

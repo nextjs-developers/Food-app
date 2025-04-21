@@ -69,7 +69,7 @@ const Slider = () => {
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="bg-transparent absolute left-0 top-1/2 -translate-y-1/2 h-full rounded-btn hover:bg-opacity-90 mx-1 bg-neutral text-neutral-content p-2 transition-colors duration-200"
+          className="bg-transparent absolute left-0 top-1/2 -translate-y-1/2 h-full rounded-btn hover:bg-opacity-90 mx-1  text-neutral-content p-2 transition-colors duration-200"
           aria-label="Previous slide"
         >
           <ChevronLeft
@@ -79,7 +79,7 @@ const Slider = () => {
         </button>
         <button
           onClick={nextSlide}
-          className="bg-transparent absolute right-0 top-1/2 -translate-y-1/2 h-full rounded-btn hover:bg-opacity-90 mx-1 bg-neutral text-neutral-content p-2 transition-colors duration-200"
+          className="bg-transparent absolute right-0 top-1/2 -translate-y-1/2 h-full rounded-btn hover:bg-opacity-90 mx-1  text-neutral-content p-2 transition-colors duration-200"
           aria-label="Next slide"
         >
           <ChevronRight
@@ -91,7 +91,7 @@ const Slider = () => {
 
       {/* Indicators */}
       <div className=" mt-4 gap-2   absolute left-1/2 bottom-0  -translate-x-1/2">
-        <div className="bg-[url('/icons/rec-2.png')]  bg-cover w-[154px] h-[33px] flex justify-center bg-center bg-cover " >
+        <div className="bg-[url('/icons/rec-2.png')]  bg-cover w-[154px] h-[33px] flex justify-center bg-center  " >
 
         {images.map((_, index) => (
           <button
