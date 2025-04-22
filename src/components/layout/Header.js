@@ -47,7 +47,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {isAuthOpen && <AuthForm isOpen={isAuthOpen} setIsOpen={setIsAuthOpen} step={step}  setStep={setStep}/>}
+      {isOpen && <AuthForm isOpen={isOpen} setIsOpen={setIsOpen} step={step}  setStep={setStep}/>}
     </div>
   );
 };
