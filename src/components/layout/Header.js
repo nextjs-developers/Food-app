@@ -47,7 +47,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {isOpen && <AuthForm isOpen={isOpen} setIsOpen={setIsOpen} step={step}  setStep={setStep}/>}
+      {isAuthOpen && <AuthForm isOpen={isAuthOpen} setIsOpen={setIsAuthOpen} step={step}  setStep={setStep}/>}
+      {isSearchOpen && <SearchModal isOpen={isSearchOpen} setIsOpen={setIsSearchOpen}/>}
     </div>
   );
 };
