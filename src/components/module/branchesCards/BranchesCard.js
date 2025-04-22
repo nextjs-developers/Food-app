@@ -5,7 +5,7 @@ function BranchesCard({branch,showImageHandler}) {
   return (
     <div
     
-    className="w-[300px] max-h-[600px] border border-[#cbcbcb] rounded-[8px] cursor-pointer shadow-accent-content relative overflow-hidden group hover:border-[#353535] hover:shadow-accent hover:min-h-56 hover:-mb-8 transition-all"
+    className="w-[300px] max-h-[600px] border border-[#cbcbcb] rounded-[8px] cursor-pointer shadow-accent-content relative overflow-hidden group hover:border-[#353535] hover:shadow-accent hover:min-h-56 hover:-mb-10 md:hover:-mb-8 transition-all"
   >
     <figure
       className="relative cursor-pointer"

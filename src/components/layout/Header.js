@@ -41,7 +41,6 @@ const Header = () => {
         </div>
     
       </div>
-      <Slider />
       {isOpen && <AuthForm isOpen={isOpen} setIsOpen={setIsOpen} step={step}  setStep={setStep}/>}
     </div>
   );

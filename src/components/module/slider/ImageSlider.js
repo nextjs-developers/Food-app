@@ -18,11 +18,11 @@ function ImageSlider({ selectedImage, setIsOpen }) {
     <div className="  m-auto mt-8">
       <div className=" rounded-0 group duration-300">
         <div className="relative rounded-box flex justify-center align-middle w-full h-full">
-          <div className="relative ">
+          <div className="relative   ">
             <Image
               src={selectedImage[currentIndex]}
-           width={550}
-           height={150}
+           width={808}
+           height={440}
               alt={`Slide ${currentIndex + 1}`}
               priority
               className="object-contain transition-opacity duration-500 "
@@ -36,7 +36,7 @@ function ImageSlider({ selectedImage, setIsOpen }) {
           </div>
 
           <div className="absolute bottom-0">
-            <div className=" carousel flex justify-center align-middle bg-transparent carousel-center max-w-full p-4 space-x-4  rounded-box">
+            <div className=" carousel flex flex-wrap justify-center align-middle bg-transparent carousel-center max-w-full p-4 space-x-4  rounded-box">
               {selectedImage.map((image, index) => (
                 <div
                   key={index}
@@ -47,7 +47,7 @@ function ImageSlider({ selectedImage, setIsOpen }) {
                   <img
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    className="rounded-box h-24 w-24 object-cover cursor-pointer"
+                    className="rounded-box md:h-24 md:w-24 h-14 w-14 object-cover cursor-pointer"
                     onClick={() => goToImage(index)}
                   />
                   {currentIndex === index && (
