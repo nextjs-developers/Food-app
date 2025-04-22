@@ -58,7 +58,6 @@ function ImageSlider({ selectedImage, setIsOpen }) {
             </div>
           </div>
         </div>
-
         <div className="text-center text-white mt-6">
           {currentIndex + 1} / {selectedImage.length}
         </div>

@@ -2,9 +2,18 @@
 import { useState } from "react";
 import ModalContainer from "../container/ModalContainer";
 import { menu } from "src/constant/Menu";
+import Image from "next/image";
+import SelectedBranches from "../module/branchesCards/SelectedBranches";
 
 const RestaurantMenu = () => {
-const[isOpenBranches , setIsOpenBranches] = useState(false)
+const[isOpenBranches , setIsOpenBranches] = useState(false);
+const[selectedmenu , setSelectedMenu] = useState(null);
+
+const menuItemHandler =(item)=>{
+  setIsOpenBranches(true);
+  setSelectedMenu(item);
+}
+
   return (
     <div className="bg-gray-100 pb-10 ">
       <div className="text-center py-10">
@@ -14,17 +23,17 @@ const[isOpenBranches , setIsOpenBranches] = useState(false)
 
 {menu.map ((item)=>
 (
-  <div key={item.id} className="relative text-center ">
+  <div key={item.id} className="relative text-center " onClick={()=>menuItemHandler(item)}>
   <div className="absolute inset-3 bg-[#417F56] rounded-lg py-10 px-7 bottom-2 top-2/5"></div>
   <div className="relative z-10">
-    <img
+    <Image
       src={item.img}
       alt= {item.title}
-      width={240}
-      height={240}
+      width={item.id===4 ? 240 : 290 }
+      height={item.id===4 ? 240 : 290 }
       className="mx-auto rounded-lg "
     />
-    <button className="bg-white py-2 px-12 shadow-md mt-2">
+    <button className="bg-white py-2 px-12 shadow-md mt-2" >
       {item.title}
     </button>
   </div>
@@ -98,10 +107,10 @@ const[isOpenBranches , setIsOpenBranches] = useState(false)
           </div>
         </div> */}
       </div>
-      {isOpenBranches && <ModalContainer>
-        
-        hello
-        </ModalContainer>}
+      {isOpenBranches && <ModalContainer isOpen={isOpenBranches}>
+        <SelectedBranches setIsOpenBranches={setIsOpenBranches} selectedmenu={selectedmenu}/>
+      
+        </ModalContainer>} 
     </div>
   );
 };
