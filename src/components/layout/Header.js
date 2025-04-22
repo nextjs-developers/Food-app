@@ -33,7 +33,7 @@ const Header = () => {
               src="/icons/shopping-cart.png"
               alt="shopping-card"
               width={20}
-              height={20}
+              height={20}   
             />
           </div>
           <div className="btn bg-[#E5F2E9] text-[#417F56] hover:bg-[#417F56] hover:text-white transition md:w-[100px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center ">
@@ -47,7 +47,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {isOpen && <AuthForm isOpen={isOpen} setIsOpen={setIsOpen} step={step}  setStep={setStep}/>}
+      {isAuthOpen && <AuthForm isOpen={isAuthOpen} setIsOpen={setIsAuthOpen} step={step}  setStep={setStep}/>}
     </div>
   );
 };
