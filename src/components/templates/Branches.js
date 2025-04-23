@@ -18,14 +18,21 @@ function Branches() {
       <h4 className="text-[24px] font-bold text-center leading-[140%] mx-auto my-10 ">
         Mehmoni Branches
       </h4>
-      <div className="card grid  md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-10 md:px-10 justify-center">
-        {branches.map((branch) => ( 
-        <BranchesCard key={branch.id} branch={branch} showImageHandler={showImageHandler}/>
+      <div className="card  grid  md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-10 md:px-10 justify-center">
+        {branches.map((branch) => (
+          <BranchesCard
+            key={branch.id}
+            branch={branch}
+            showImageHandler={showImageHandler}
+          />
         ))}
       </div>
       {isOpenImage && (
         <ModalContainer isOpen={isOpenImage}>
-          <ImageSlider selectedImage={selectedImage} setIsOpen={setIsOpenImage} />
+          <ImageSlider
+            selectedImage={selectedImage}
+            setIsOpen={setIsOpenImage}
+          />
         </ModalContainer>
       )}
     </div>

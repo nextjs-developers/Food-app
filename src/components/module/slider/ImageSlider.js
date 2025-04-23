@@ -17,26 +17,26 @@ function ImageSlider({ selectedImage, setIsOpen }) {
   return (
     <div className="  m-auto mt-8">
       <div className=" rounded-0 group duration-300">
-        <div className="relative rounded-box flex justify-center align-middle w-full h-full">
-          <div className="relative   ">
+        <div className="relative rounded-box flex justify-center align-middle">
+          <div className="relative  ">
             <Image
               src={selectedImage[currentIndex]}
-           width={808}
-           height={440}
+              width={808}
+              height={440}
               alt={`Slide ${currentIndex + 1}`}
               priority
-              className="object-contain transition-opacity duration-500 "
+              className="relative w-[320px] h-[352px] md:w-[808px] md:h-[440px] object-contain transition-opacity duration-500 "
             />
             <button
               onClick={closeModal}
-              className="text-white absolute top-[15px] left-[15px] "
+              className="text-white absolute  md:top-[10px] md:left-[150px] top-[60px] left-[10px] "
             >
-              <RxCross2 className="text-2xl" />
+              <RxCross2 className="md:text-2xl text-[20px]  " />
             </button>
           </div>
 
-          <div className="absolute bottom-0">
-            <div className=" carousel flex flex-wrap justify-center align-middle bg-transparent carousel-center max-w-full p-4 space-x-4  rounded-box">
+          <div className="absolute inset-x-0 md:bottom-0 bottom-[40px]">
+            <div className=" carousel flex overflow-x-clip justify-center align-middle bg-transparent carousel-center max-w-full p-4 space-x-4  rounded-box">
               {selectedImage.map((image, index) => (
                 <div
                   key={index}

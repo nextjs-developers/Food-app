@@ -6,8 +6,10 @@ import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Image from "next/image";
 import { getRefreshToken } from "@/core/lib/token";
-import Link from "next/link";
 import SearchModal from "../templates/search/SearchModal";
+import DropDownAccount from "../module/authForm/DropDownAccount";
+
+
 
 const Header = () => {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
@@ -32,22 +34,25 @@ const Header = () => {
               src="/icons/shopping-cart.png"
               alt="shopping-card"
               width={20}
-              height={20}   
+              height={20}
             />
           </div>
-          <div className="btn bg-[#E5F2E9] text-[#417F56] hover:bg-[#417F56] hover:text-white transition md:w-[100px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center ">
+          <div className="btn bg-[#E5F2E9] text-[#417F56]   transition md:w-[80px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center ">
             {token ? (
-              <button>
-                <Link href="/dashboard">Account</Link>{" "}
-              </button>
+              <DropDownAccount/>
             ) : (
-              <button onClick={() => setIsAuthOpen(true)}> login</button>
+              <button
+                className="hover:text-white"
+                onClick={() => setIsAuthOpen(true)}
+              >
+                {" "}
+                login
+              </button>
             )}
           </div>
         </div>
       </div>
       {isAuthOpen && <AuthForm isOpen={isAuthOpen} setIsOpen={setIsAuthOpen} step={step}  setStep={setStep}/>}
-      {isSearchOpen && <SearchModal isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />}
     </div>
   );
 };
