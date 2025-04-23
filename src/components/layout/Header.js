@@ -5,7 +5,6 @@ import HeaderNavbar from "../module/navbar/HeaderNavbar";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Image from "next/image";
-import Slider from "../module/slider/Slider";
 import { getRefreshToken } from "@/core/lib/token";
 import Link from "next/link";
 import SearchModal from "../templates/search/SearchModal";
@@ -48,6 +47,7 @@ const Header = () => {
         </div>
       </div>
       {isAuthOpen && <AuthForm isOpen={isAuthOpen} setIsOpen={setIsAuthOpen} step={step}  setStep={setStep}/>}
+      {isSearchOpen && <SearchModal isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />}
     </div>
   );
 };

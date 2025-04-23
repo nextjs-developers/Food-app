@@ -1,12 +1,16 @@
+"use client";
+
 import SearchInput from "@/components/module/search/SearchInput";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function SearchModal({ isOpen, setIsOpen }) {
+  const [search, setSearch] = useState("");
   const dialogRef = useRef();
 
   useEffect(() => {
     isOpen ? dialogRef.current?.showModal() : dialogRef.current?.close();
   }, [isOpen]);
+
   return (
     <div>
       <dialog ref={dialogRef} className="modal">
@@ -25,7 +29,11 @@ function SearchModal({ isOpen, setIsOpen }) {
           <p className="pt-8 pb-3 text-base text-center">
             Please enter your text and press enter.
           </p>
-          <SearchInput />
+          <SearchInput
+            search={search}
+            setSearch={setSearch}
+            setIsOpen={setIsOpen}
+          />
         </div>
       </dialog>
     </div>
