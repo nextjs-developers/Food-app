@@ -1,20 +1,15 @@
 "use client";
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 function SearchInput({ initialValue= "", setIsOpen }) {
   const router = useRouter();
-  // const pathname = usePathname()
-  const searchParams = useSearchParams()
   const [search,setSearch] = useState(initialValue)
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      // if (pathname !== "/result") {
-      //   setIsOpen?.(false);
-      // }
       router.push(`/result?search=${encodeURIComponent(search)}`);
       if(setIsOpen) setIsOpen(false)
     }
