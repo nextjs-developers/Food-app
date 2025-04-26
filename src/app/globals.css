@@ -2,26 +2,26 @@
 @plugin "daisyui";
 
 @font-face {
-  font-family:"robotoRegular";
-  src: url("../../public/font/Roboto/Roboto-Regular.ttf")format("ttf");
+  font-family: "robotoRegular";
+  src: url("../../public/font/Roboto/Roboto-Regular.ttf") format("ttf");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family:"roboto";
-  src: url("../../public/font/Roboto/Roboto-Medium.ttf")format("ttf");
+  font-family: "roboto";
+  src: url("../../public/font/Roboto/Roboto-Medium.ttf") format("ttf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family:"robotoBold";
-  src: url("../../public/font/Roboto/Roboto-Bold.ttf")format("ttf");
+  font-family: "robotoBold";
+  src: url("../../public/font/Roboto/Roboto-Bold.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family:"robotoThin";
-  src: url("../../public/font/Roboto/Roboto-Thin.ttf")format("ttf");
+  font-family: "robotoThin";
+  src: url("../../public/font/Roboto/Roboto-Thin.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -51,10 +51,9 @@
   --bg-light: #e5f2e9;
   /* fontFamily */
   --font-roboto: "roboto", "sans-serif";
---font-robotoRegular:"robotoRegular";
---font-robotoBold:"robotoBold";
---font-robotoThin:"robotoThin";
-
+  --font-robotoRegular: "robotoRegular";
+  --font-robotoBold: "robotoBold";
+  --font-robotoThin: "robotoThin";
 }
 @plugin "daisyui" {
   themes: light var(--default), dark var(--prefersdark);
@@ -67,26 +66,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-   /* primary-green */
-   --color-primary: #417f56;
-   --color-primary-dark: #183020;
-   --color-primary-light: #cae4d3;
-   /* gray */
-   --color-gray-light: #e1e1e1;
-   --color-gary-mid: #cbcbcb;
-   /* Error */
-   --color-error: #c30000;
-   --color-error-light: #ed2e2e;
-   --color-error-exteraLight: #fff2f2;
-   /* Success */
-   --color-success: #00966d;
-   --color-success-light: #00ba88;
-   --color-success-extraLight: #f3fdfa;
-   /* Warning */
-   --color-warning: #a9791c;
-   --color-warning-light: #f4b740;
-   --color-warning-extraLight: #fff8e1;
-}
+    /* primary-green */
+    --color-primary: #417f56;
+    --color-primary-dark: #183020;
+    --color-primary-light: #cae4d3;
+    /* gray */
+    --color-gray-light: #e1e1e1;
+    --color-gary-mid: #cbcbcb;
+    /* Error */
+    --color-error: #c30000;
+    --color-error-light: #ed2e2e;
+    --color-error-exteraLight: #fff2f2;
+    /* Success */
+    --color-success: #00966d;
+    --color-success-light: #00ba88;
+    --color-success-extraLight: #f3fdfa;
+    /* Warning */
+    --color-warning: #a9791c;
+    --color-warning-light: #f4b740;
+    --color-warning-extraLight: #fff8e1;
+  }
 }
 .menu {
   --menu-active-fg: none;
@@ -96,11 +95,11 @@
 body {
   background: var(--default);
   color: var(--prefersdark);
-font-family: "Roboto-Medium";
-max-width: 1500px;
-margin: auto;
+  font-family: "Roboto-Medium";
+  max-width: 1500px;
+  margin: auto;
 }
-
+/* box-Shadow */
 .shadow-2 {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
@@ -108,4 +107,99 @@ margin: auto;
 .shadow-4 {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.shadow-6 {
+  box-shadow: 0px 6px 6px 0px #00000040;
+}
 
+.shadow-8 {
+  box-shadow: 0px 8px 8px 0px #00000040;
+}
+.shadow-12 {
+  box-shadow: 0px 12px 12px 0px #00000040;
+}
+
+.shadow-16 {
+  box-shadow: 0px 16px 16px 0px #00000040;
+}
+.cards-shadow {
+  box-shadow: 0px 0px 0px #0000001a, 0px 1px 2px 0px #0000001a,
+    0px 4px 4px 0px #00000017, 0px 9px 5px 0px #0000000d,
+    0px 16px 6px 0px #00000003, 0px 25px 7px 0px #00000000;
+}
+.contactCards-shadow {
+  box-shadow: 0px 0px 0px #0000001a, 0px 3px 6px 0px #0000001a,
+    0px 11px 11px 0px #00000017, 0px 24px 14px 0px #0000000d,
+    0px 42px 17px 0px #00000003, 0px 66px 18px 0px #00000000;
+}
+/* border-radius */
+.radius-4 {
+  border-radius: 4px;
+}
+.radius-8 {
+  border-radius: 8px;
+}
+.radius-16 {
+  border-radius: 16px;
+}
+.radius-24 {
+  border-radius: 24px;
+}
+.radius-32 {
+  border-radius: 32px;
+}
+.radius-64 {
+  border-radius: 64px;
+}
+/* padding */
+.padding-8 {
+  padding: 8px;
+}
+.padding-16 {
+  padding: 16px;
+}
+.padding-24 {
+  padding: 24px;
+}
+.padding-32 {
+  padding: 32px;
+}
+/* font-size */
+
+.extraBold {
+  font-size: 64px;
+}
+.bold {
+  font-size: 56px;
+}
+h1 {
+  font-size: 44px;
+}
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 36px;
+}
+h4 {
+  font-size: 24px;
+}
+.body-xl {
+  font-size: 20px;
+}
+.body-Lg {
+  font-size: 18px;
+}
+.body-md {
+  font-size: 16px;
+}
+.body-sm {
+  font-size: 14px;
+}
+
+.caption-md {
+  font-size: 12px;
+}
+.caption-sm {
+  font-size: 10px;
+}

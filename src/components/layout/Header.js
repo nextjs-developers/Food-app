@@ -23,9 +23,9 @@ const Header = () => {
         <div className="flex items-center justify-between gap-[8px]">
           <div
             onClick={() => setIsSearchOpen(true)}
-            className="hidden md:flex bg-[#E5F2E9] w-[40px] h-[40px] hover:bg-[#417F56]  transition md:justify-center md:items-center rounded cursor-pointer"
+            className="hidden md:flex bg-[#E5F2E9] w-[40px] h-[40px] hover:bg-primary transition md:justify-center md:items-center rounded cursor-pointer"
           >
-            <CiSearch className="text-[#417F56]  w-[24px] h-[24px] p-8px m-auto hover:text-white" />
+            <CiSearch className="text-primary w-[24px] h-[24px] p-8px m-auto hover:text-white" />
           </div>
           <div className=" flex bg-[#E5F2E9]  md:w-[40px] md:h-[40px] w-[30] h-[30] justify-center items-center rounded cursor-pointer">
             <Image
@@ -35,7 +35,7 @@ const Header = () => {
               height={20}
             />
           </div>
-          <div className="btn bg-[#E5F2E9] text-[#417F56]   transition md:w-[80px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center ">
+          <div className="btn bg-[#E5F2E9] text-primary  transition md:w-[80px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center ">
             {token ? (
               <DropDownAccount />
             ) : (
