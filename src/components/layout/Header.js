@@ -45,7 +45,6 @@ const Header = () => {
                 className="hover:text-white"
                 onClick={() => setIsAuthOpen(true)}
               >
-                {" "}
                 login
               </button>
             )}
@@ -60,6 +59,7 @@ const Header = () => {
           setStep={setStep}
         />
       )}
+      {isSearchOpen && (<SearchModal isOpen={isSearchOpen} setIsOpen={setIsSearchOpen}/>)}  
     </div>
   );
 };
