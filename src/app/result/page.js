@@ -1,4 +1,5 @@
 import SearchInput from "@/components/module/search/SearchInput";
+import BranchMenuCard from "@/components/templates/branchPage/BranchMenuCard";
 import Image from "next/image";
 import { branchesMenu } from "src/constant/branchesMenu";
 
@@ -10,7 +11,7 @@ function Result({ searchParams }) {
   );
 
   return (
-    <div className="h-screen items-center justify-center py-10 px-4 text-center  space-y-6">
+    <div className="min-h-screen items-center justify-center py-10 px-4 text-center  space-y-6">
       {filtered.length && searchQuery ? (
         <>
           <h2 className="font-bold text-2xl">
@@ -18,9 +19,11 @@ function Result({ searchParams }) {
             <span className="text-[#417F56]">{searchQuery}</span>
           </h2>
           <SearchInput initialValue={searchQuery} />
-          <ul>
+          <ul className="flex justify-center items-center gap-4 flex-wrap mt-12">
             {filtered.map((item) => (
-              <li key={item.id}>{item.title}</li>
+              <li key={item.id}>
+                <BranchMenuCard data={item} />
+              </li>
             ))}
           </ul>
         </>
