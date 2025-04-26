@@ -2,33 +2,33 @@
 @plugin "daisyui";
 
 @font-face {
-  font-family:"Roboto-Regular";
+  font-family:"robotoRegular";
   src: url("../../public/font/Roboto/Roboto-Regular.ttf")format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family:"roboto";
+  src: url("../../public/font/Roboto/Roboto-Medium.ttf")format("ttf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family:"Roboto-Medium";
-  src: url("../../public/font/Roboto/Roboto-Medium.ttf")format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family:"Roboto-Bold";
+  font-family:"robotoBold";
   src: url("../../public/font/Roboto/Roboto-Bold.ttf")format("ttf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family:"Roboto-Thin";
+  font-family:"robotoThin";
   src: url("../../public/font/Roboto/Roboto-Thin.ttf")format("ttf");
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 
 :root {
   /* primary-green */
-  /* --color-primary: #417f56; */
+  --color-primary: #417f56;
   --color-primary-dark: #183020;
   --color-primary-light: #cae4d3;
   /* gray */
@@ -49,8 +49,11 @@
   --color-warning-extraLight: #fff8e1;
 
   --bg-light: #e5f2e9;
-
-box-shadow:0px 0px 0px 0px #0000001A,0px 3px 6px 0px #0000001A,0px 11px 11px 0px #00000017,0px 24px 14px 0px #0000000D,0px 42px 17px 0px #00000003,0px 66px 18px 0px #00000000;
+  /* fontFamily */
+  --font-roboto: "roboto", "sans-serif";
+--font-robotoRegular:"robotoRegular";
+--font-robotoBold:"robotoBold";
+--font-robotoThin:"robotoThin";
 
 }
 @plugin "daisyui" {
@@ -64,9 +67,26 @@ box-shadow:0px 0px 0px 0px #0000001A,0px 3px 6px 0px #0000001A,0px 11px 11px 0px
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #417f56;
-    --bg-light: #e5f2e9;
-  }
+   /* primary-green */
+   --color-primary: #417f56;
+   --color-primary-dark: #183020;
+   --color-primary-light: #cae4d3;
+   /* gray */
+   --color-gray-light: #e1e1e1;
+   --color-gary-mid: #cbcbcb;
+   /* Error */
+   --color-error: #c30000;
+   --color-error-light: #ed2e2e;
+   --color-error-exteraLight: #fff2f2;
+   /* Success */
+   --color-success: #00966d;
+   --color-success-light: #00ba88;
+   --color-success-extraLight: #f3fdfa;
+   /* Warning */
+   --color-warning: #a9791c;
+   --color-warning-light: #f4b740;
+   --color-warning-extraLight: #fff8e1;
+}
 }
 .menu {
   --menu-active-fg: none;
@@ -79,5 +99,13 @@ body {
 font-family: "Roboto-Medium";
 max-width: 1500px;
 margin: auto;
+}
+
+.shadow-2 {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-4 {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 

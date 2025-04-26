@@ -9,8 +9,6 @@ import { getRefreshToken } from "@/core/lib/token";
 import SearchModal from "../templates/search/SearchModal";
 import DropDownAccount from "../module/authForm/DropDownAccount";
 
-
-
 const Header = () => {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -39,7 +37,7 @@ const Header = () => {
           </div>
           <div className="btn bg-[#E5F2E9] text-[#417F56]   transition md:w-[80px] w-[60px] md:h-[40px] h-[30px] text-[12px] text-center ">
             {token ? (
-              <DropDownAccount/>
+              <DropDownAccount />
             ) : (
               <button
                 className="hover:text-white"
@@ -59,7 +57,9 @@ const Header = () => {
           setStep={setStep}
         />
       )}
-      {isSearchOpen && (<SearchModal isOpen={isSearchOpen} setIsOpen={setIsSearchOpen}/>)}  
+      {isSearchOpen && (
+        <SearchModal isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />
+      )}
     </div>
   );
 };

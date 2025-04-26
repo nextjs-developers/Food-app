@@ -8,7 +8,7 @@ import { GrLocation } from "react-icons/gr";
 import { HiOutlineLogout } from "react-icons/hi";
 function DropDownAccount() {
   return (
-    <div className="dropdown left-0  dropdown-end">
+    <div className="dropdown left-0  dropdown-center">
       <div tabIndex={0} className="flex justify-center items-center ">
         <LuUserRound className="md:text-[20px] text-[16px]" />
         <MdKeyboardArrowDown className="text-[20px] hidden md:block" />

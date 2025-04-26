@@ -81,12 +81,7 @@ module.exports = {
         "overLine-LG": "16px",
         "overLine-SM": "12px",
       },
-      fontWeight: {
-        normal: "400",
-        medium: "500",
-        semibold: "600",
-        bold: "700",
-      },
+  
     },
   },
   plugin: "daisyui",

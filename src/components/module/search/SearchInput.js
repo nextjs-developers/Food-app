@@ -1,4 +1,20 @@
-function SearchInput() {
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
+function SearchInput({ initialValue= "", setIsOpen }) {
+  const router = useRouter();
+  const [search,setSearch] = useState(initialValue)
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push(`/result?search=${encodeURIComponent(search)}`);
+      if(setIsOpen) setIsOpen(false)
+    }
+  };
+
   return (
     <div className="flex items-center justify-center">
       <label className="input">
@@ -18,7 +34,14 @@ function SearchInput() {
             <path d="m21 21-4.3-4.3"></path>
           </g>
         </svg>
-        <input type="search" required placeholder="Search" />
+        <input
+          type="search"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={handleKeyDown}
+          required
+          placeholder="Search"
+        />
       </label>
     </div>
   );
