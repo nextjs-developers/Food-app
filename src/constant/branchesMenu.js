@@ -3,15 +3,17 @@ export const branchesMenuRaw = [
   {
     id: 1,
     title: "Whole Wheat Pizza Crust",
+    ingredients: "Something",
     rate: 4,
     price: 23,
     image: "/mainCourse/Amazing Whole Wheat Pizza Crust.webp",
-    discount: 20,
+    discount: 0,
     category: "mainCourse",
   },
   {
     id: 2,
     title: "American Lasagna",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/American Lasagna.webp",
@@ -21,8 +23,9 @@ export const branchesMenuRaw = [
   {
     id: 3,
     title: "Balsamic Chicken and Pasta",
+    ingredients: "Something",
     rate: 3,
-    price: 19,
+    price: 18,
     image: "/mainCourse/Balsamic Chicken and Pasta.webp",
     discount: 10,
     category: "mainCourse",
@@ -30,8 +33,9 @@ export const branchesMenuRaw = [
   {
     id: 4,
     title: "BBQ Chicken Pizza",
+    ingredients: "Something",
     rate: 3,
-    price: 19,
+    price: 24,
     image: "/mainCourse/BBQ Chicken Pizza.webp",
     discount: 10,
     category: "mainCourse",
@@ -39,8 +43,9 @@ export const branchesMenuRaw = [
   {
     id: 5,
     title: "Black Bean Lasagna",
+    ingredients: "Something",
     rate: 3,
-    price: 19,
+    price: 21,
     image: "/mainCourse/Black Bean Lasagna.webp",
     discount: 10,
     category: "mainCourse",
@@ -48,6 +53,7 @@ export const branchesMenuRaw = [
   {
     id: 6,
     title: "Broccoli Garlic Angel Hair Pasta",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Broccoli Garlic Angel Hair Pasta.webp",
@@ -57,8 +63,9 @@ export const branchesMenuRaw = [
   {
     id: 7,
     title: "Cajun Seafood Pasta",
+    ingredients: "Something",
     rate: 3,
-    price: 19,
+    price: 17,
     image: "/mainCourse/Cajun Seafood Pasta.webp",
     discount: 10,
     category: "mainCourse",
@@ -66,8 +73,9 @@ export const branchesMenuRaw = [
   {
     id: 8,
     title: "Champagne Shrimp and Pasta",
+    ingredients: "Something",
     rate: 3,
-    price: 19,
+    price: 29,
     image: "/mainCourse/Champagne Shrimp and Pasta.webp",
     discount: 10,
     category: "mainCourse",
@@ -75,8 +83,9 @@ export const branchesMenuRaw = [
   {
     id: 9,
     title: "Cheese Lasagna",
+    ingredients: "Something",
     rate: 3,
-    price: 19,
+    price: 16,
     image: "/mainCourse/Cheese Lasagna.webp",
     discount: 10,
     category: "mainCourse",
@@ -84,6 +93,7 @@ export const branchesMenuRaw = [
   {
     id: 10,
     title: "Chicken Alfredo Pizza",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Chicken Alfredo Pizza.webp",
@@ -93,8 +103,9 @@ export const branchesMenuRaw = [
   {
     id: 11,
     title: "Chicken Avocado Pizza",
+    ingredients: "Something",
     rate: 3,
-    price: 19,
+    price: 25,
     image: "/mainCourse/Chicken Avocado Pizza.webp",
     discount: 10,
     category: "mainCourse",
@@ -102,8 +113,9 @@ export const branchesMenuRaw = [
   {
     id: 12,
     title: "Classic Lasagna",
+    ingredients: "Something",
     rate: 3,
-    price: 19,
+    price: 17,
     image: "/mainCourse/Classic Lasagna.webp",
     discount: 10,
     category: "mainCourse",
@@ -111,6 +123,7 @@ export const branchesMenuRaw = [
   {
     id: 13,
     title: "Creamy Pasta Bake with Cherry Tomatoes and Basil",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Creamy Pasta Bake with Cherry Tomatoes and Basil.webp",
@@ -120,6 +133,7 @@ export const branchesMenuRaw = [
   {
     id: 14,
     title: "Creamy Sun-Dried Tomato Pasta",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Creamy Sun-Dried Tomato Pasta.webp",
@@ -129,6 +143,7 @@ export const branchesMenuRaw = [
   {
     id: 15,
     title: "Crescent Pizza Pockets",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Crescent Pizza Pockets.webp",
@@ -138,6 +153,7 @@ export const branchesMenuRaw = [
   {
     id: 16,
     title: "Deep-Dish Cast Iron Pizza",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Deep-Dish Cast Iron Pizza.webp",
@@ -147,6 +163,7 @@ export const branchesMenuRaw = [
   {
     id: 17,
     title: "Easy Vegetarian Spinach Lasagna",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Easy Vegetarian Spinach Lasagna.webp",
@@ -156,6 +173,7 @@ export const branchesMenuRaw = [
   {
     id: 18,
     title: "Eggplant Lasagna",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Eggplant Lasagna.webp",
@@ -165,6 +183,7 @@ export const branchesMenuRaw = [
   {
     id: 19,
     title: "Eggs Benedict Breakfast Pizza",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Eggs Benedict Breakfast Pizza.webp",
@@ -174,6 +193,7 @@ export const branchesMenuRaw = [
   {
     id: 20,
     title: "Flourless Eggplant Pizza",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Flourless Eggplant Pizza.webp",
@@ -183,6 +203,7 @@ export const branchesMenuRaw = [
   {
     id: 21,
     title: "Greek Pizza with Spinach, Feta and Olives",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Greek Pizza with Spinach, Feta and Olives.webp",
@@ -192,6 +213,7 @@ export const branchesMenuRaw = [
   {
     id: 22,
     title: "Hearty Vegetable Lasagna",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Hearty Vegetable Lasagna.webp",
@@ -201,6 +223,7 @@ export const branchesMenuRaw = [
   {
     id: 23,
     title: "Hummus Pizza",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Hummus Pizza.webp",
@@ -210,6 +233,7 @@ export const branchesMenuRaw = [
   {
     id: 24,
     title: "Lasagna Alfredo Roll Ups",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Lasagna Alfredo Roll Ups.webp",
@@ -219,6 +243,7 @@ export const branchesMenuRaw = [
   {
     id: 25,
     title: "Pan-Seared Lemon Tilapia with Parmesan Pasta",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Pan-Seared Lemon Tilapia with Parmesan Pasta.webp",
@@ -228,6 +253,7 @@ export const branchesMenuRaw = [
   {
     id: 26,
     title: "Pasta alla Vodka",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Pasta alla Vodka.webp",
@@ -237,6 +263,7 @@ export const branchesMenuRaw = [
   {
     id: 27,
     title: "Pasta Fazool (Pasta e Fagioli)",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Pasta Fazool (Pasta e Fagioli).webp",
@@ -246,6 +273,7 @@ export const branchesMenuRaw = [
   {
     id: 28,
     title: "pasta-con-sarde-pasta-with-sardines",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/pasta-con-sarde-pasta-with-sardines.webp",
@@ -255,6 +283,7 @@ export const branchesMenuRaw = [
   {
     id: 29,
     title: "Pesto Pasta",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Pesto Pasta.webp",
@@ -264,6 +293,7 @@ export const branchesMenuRaw = [
   {
     id: 30,
     title: "Penne Pasta with Spinach and Bacon",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Penne Pasta with Spinach and Bacon.webp",
@@ -273,6 +303,7 @@ export const branchesMenuRaw = [
   {
     id: 31,
     title: "Pesto Pasta",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Pesto Pasta.webp",
@@ -282,6 +313,7 @@ export const branchesMenuRaw = [
   {
     id: 32,
     title: "Pesto Pizza",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Pesto Pizza.webp",
@@ -291,6 +323,7 @@ export const branchesMenuRaw = [
   {
     id: 33,
     title: "shrimp-scampi-with-pasta",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/shrimp-scampi-with-pasta.webp",
@@ -300,6 +333,7 @@ export const branchesMenuRaw = [
   {
     id: 34,
     title: "Savory Sea Scallops and Angel Hair Pasta",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Savory Sea Scallops and Angel Hair Pasta.webp",
@@ -309,6 +343,7 @@ export const branchesMenuRaw = [
   {
     id: 35,
     title: "Spinach and Turkey Lasagna",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Spinach and Turkey Lasagna.webp",
@@ -318,6 +353,7 @@ export const branchesMenuRaw = [
   {
     id: 36,
     title: "Spinach Lasagna Roll Ups",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Spinach Lasagna Roll Ups.webp",
@@ -327,6 +363,7 @@ export const branchesMenuRaw = [
   {
     id: 37,
     title: "Taco Pizza",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Taco Pizza.webp",
@@ -336,6 +373,7 @@ export const branchesMenuRaw = [
   {
     id: 38,
     title: "Veggie Pizza",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Veggie Pizza.webp",
@@ -345,6 +383,7 @@ export const branchesMenuRaw = [
   {
     id: 39,
     title: "Zucchini Pizza Bake",
+    ingredients: "Something",
     rate: 3,
     price: 19,
     image: "/mainCourse/Zucchini Pizza Bake.webp",
@@ -355,6 +394,7 @@ export const branchesMenuRaw = [
   {
     id: 40,
     title: "Cranberry Wassail",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Cranberry Wassail.webp",
@@ -364,6 +404,7 @@ export const branchesMenuRaw = [
   {
     id: 41,
     title: "Eggnog Latte",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Eggnog Latte.webp",
@@ -373,6 +414,7 @@ export const branchesMenuRaw = [
   {
     id: 42,
     title: "Gingerade",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Gingerade.webp",
@@ -382,6 +424,7 @@ export const branchesMenuRaw = [
   {
     id: 43,
     title: "Green Punch",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Green Punch.webp",
@@ -391,6 +434,7 @@ export const branchesMenuRaw = [
   {
     id: 44,
     title: "Hot Buttered Rum",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Hot Buttered Rum.webp",
@@ -400,6 +444,7 @@ export const branchesMenuRaw = [
   {
     id: 45,
     title: "Mexican Strawberry Water (Agua de Fresa)",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Mexican Strawberry Water (Agua de Fresa).webp",
@@ -409,6 +454,7 @@ export const branchesMenuRaw = [
   {
     id: 46,
     title: "Mocha Coffee Mix",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Mocha Coffee Mix.webp",
@@ -418,6 +464,7 @@ export const branchesMenuRaw = [
   {
     id: 47,
     title: "Pumpkin Spice Coffee",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Pumpkin Spice Coffee.webp",
@@ -427,6 +474,7 @@ export const branchesMenuRaw = [
   {
     id: 48,
     title: "Vintage Lemonade",
+    ingredients: "Something",
     rate: 5,
     price: 4,
     image: "/drinks/Vintage Lemonade.webp",
@@ -437,6 +485,7 @@ export const branchesMenuRaw = [
   {
     id: 49,
     title: "Apple Crisp",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/Apple Crisp.webp",
@@ -446,6 +495,7 @@ export const branchesMenuRaw = [
   {
     id: 50,
     title: "Cinnamon Nutmeg Coffee Cake",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/Cinnamon Nutmeg Coffee Cake.webp",
@@ -455,6 +505,7 @@ export const branchesMenuRaw = [
   {
     id: 51,
     title: "Coconut Milk Ice Cream",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/Coconut Milk Ice Cream.webp",
@@ -464,6 +515,7 @@ export const branchesMenuRaw = [
   {
     id: 52,
     title: "Cottage Cheese Blueberry Breakfast Cake",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/Cottage Cheese Blueberry Breakfast Cake.webp",
@@ -473,6 +525,7 @@ export const branchesMenuRaw = [
   {
     id: 53,
     title: "No-Bake Millionaire’s Shortbread",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/No-Bake Millionaire’s Shortbread.webp",
@@ -482,6 +535,7 @@ export const branchesMenuRaw = [
   {
     id: 54,
     title: "Pavlova Christmas Trees",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/Pavlova Christmas Trees.webp",
@@ -491,6 +545,7 @@ export const branchesMenuRaw = [
   {
     id: 55,
     title: "Strawberry Brownies",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/Strawberry Brownies.webp",
@@ -500,6 +555,7 @@ export const branchesMenuRaw = [
   {
     id: 56,
     title: "Tahini Butter Cookies",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/Tahini Butter Cookies.webp",
@@ -509,6 +565,7 @@ export const branchesMenuRaw = [
   {
     id: 57,
     title: "Tiramisu Blondies",
+    ingredients: "Something",
     rate: 4,
     price: 8,
     image: "/desserts/Tiramisu Blondies.webp",
@@ -519,6 +576,7 @@ export const branchesMenuRaw = [
   {
     id: 58,
     title: "Apple Spinach Salad",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Apple Spinach Salad.webp",
@@ -528,6 +586,7 @@ export const branchesMenuRaw = [
   {
     id: 59,
     title: "Artichoke Parmesan Soup",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Artichoke Parmesan Soup.webp",
@@ -537,6 +596,7 @@ export const branchesMenuRaw = [
   {
     id: 60,
     title: "Carrot Raisin Salad",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Carrot Raisin Salad.webp",
@@ -546,6 +606,7 @@ export const branchesMenuRaw = [
   {
     id: 61,
     title: "Cheesy Taco Soup",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Cheesy Taco Soup.webp",
@@ -555,6 +616,7 @@ export const branchesMenuRaw = [
   {
     id: 62,
     title: "Creamy Tomato Bean Soup",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Creamy Tomato Bean Soup.webp",
@@ -564,6 +626,7 @@ export const branchesMenuRaw = [
   {
     id: 63,
     title: "Crispy Buffalo Potato Salad",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Crispy Buffalo Potato Salad.webp",
@@ -573,6 +636,7 @@ export const branchesMenuRaw = [
   {
     id: 64,
     title: "Green Goddess Salad",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Green Goddess Salad.webp",
@@ -582,6 +646,7 @@ export const branchesMenuRaw = [
   {
     id: 65,
     title: "Hearts of Palm and Avocado Salad",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Hearts of Palm and Avocado Salad.webp",
@@ -591,6 +656,7 @@ export const branchesMenuRaw = [
   {
     id: 66,
     title: "High Protein Broccoli Cheddar Soup",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/High Protein Broccoli Cheddar Soup.webp",
@@ -600,6 +666,7 @@ export const branchesMenuRaw = [
   {
     id: 67,
     title: "Lobster-Vanilla Bean Bisque",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Lobster-Vanilla Bean Bisque.webp",
@@ -609,6 +676,7 @@ export const branchesMenuRaw = [
   {
     id: 68,
     title: "Roasted-Cherry-Tomato-Soup",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Roasted-Cherry-Tomato-Soup.webp",
@@ -618,6 +686,7 @@ export const branchesMenuRaw = [
   {
     id: 69,
     title: "Watermelon Salad with Feta",
+    ingredients: "Something",
     rate: 5,
     price: 12,
     image: "/appetizers/Watermelon Salad with Feta.webp",

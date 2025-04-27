@@ -1,19 +1,23 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-function SearchInput({ initialValue= "", setIsOpen }) {
+function SearchInput({ search }) {
   const router = useRouter();
-  const [search,setSearch] = useState(initialValue)
+  const searchParams = useSearchParams()
+  const [searchValue,setSearchValue] = useState(search)
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      router.push(`/result?search=${encodeURIComponent(search)}`);
-      if(setIsOpen) setIsOpen(false)
-    }
-  };
+  useEffect(() => {
+    const debounce = setTimeout(() => {
+      const params = new URLSearchParams(searchParams.toString());
+      searchValue ? params.set("search", searchValue) : params.delete("search");
+      params.set("page", "1");
+      router.push(`?${params.toString()}`);
+    }, 500);
+    return () => clearTimeout(debounce);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchValue, router]);
 
   return (
     <div className="flex items-center justify-center">
@@ -36,9 +40,8 @@ function SearchInput({ initialValue= "", setIsOpen }) {
         </svg>
         <input
           type="search"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          onKeyDown={handleKeyDown}
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
           required
           placeholder="Search"
         />
