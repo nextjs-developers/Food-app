@@ -171,17 +171,17 @@ body {
 .bold {
   font-size: 56px;
 }
-h1 {
+.h1-custome {
   font-size: 44px;
 }
-h2 {
+.h2-custome {
   font-size: 40px;
 }
 
-h3 {
+.h3-custome {
   font-size: 36px;
 }
-h4 {
+.h4-custome {
   font-size: 24px;
 }
 .body-xl {
