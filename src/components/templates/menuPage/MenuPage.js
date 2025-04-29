@@ -21,7 +21,7 @@ function MenuList({ paginatedMenu }) {
 
   return (
     <>
-      <ul className="w-[calc(100%-9rem)] mx-auto grid grid-cols-2 gap-6 mb-12">
+      <ul className="w-[calc(100%-3rem)] mx-auto grid grid-cols-1 gap-6 mb-12 lg:grid-cols-2 lg:w-[calc(100%-9rem)]">
         {paginatedMenu.map((item) => (
           <li key={item.id}>
             <MenuCard item={item} onClick={() => handleOpenModal(item)} />

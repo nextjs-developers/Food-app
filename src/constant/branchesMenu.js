@@ -272,7 +272,7 @@ export const branchesMenuRaw = [
   },
   {
     id: 28,
-    title: "pasta-con-sarde-pasta-with-sardines",
+    title: "pasta con sarde pasta with sardines",
     ingredients: "Something",
     rate: 3,
     price: 19,
@@ -322,7 +322,7 @@ export const branchesMenuRaw = [
   },
   {
     id: 33,
-    title: "shrimp-scampi-with-pasta",
+    title: "shrimp scampi with pasta",
     ingredients: "Something",
     rate: 3,
     price: 19,
@@ -665,7 +665,7 @@ export const branchesMenuRaw = [
   },
   {
     id: 67,
-    title: "Lobster-Vanilla Bean Bisque",
+    title: "Lobster Vanilla Bean Bisque",
     ingredients: "Something",
     rate: 5,
     price: 12,
@@ -675,7 +675,7 @@ export const branchesMenuRaw = [
   },
   {
     id: 68,
-    title: "Roasted-Cherry-Tomato-Soup",
+    title: "Roasted Cherry Tomato Soup",
     ingredients: "Something",
     rate: 5,
     price: 12,

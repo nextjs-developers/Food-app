@@ -46,14 +46,14 @@ function Menu({ searchParams }) {
         categories={categories}
         selectedCategory={selectedCategory}
       />
-      <div className="flex items-center justify-between w-[calc(100%-9rem)] mx-auto">
+      <div className="flex flex-col items-start w-100% mx-6 lg:w-[calc(100%-64)] lg:flex-row lg:items-center lg:mx-16">
         <SortMenu
           searchQuery={searchQuery}
           selectedCategory={selectedCategory}
         />
         <SearchInput search={searchQuery} />
       </div>
-      <div className="w-[calc(100%-9rem)] mx-auto mt-8 mb-6">
+      <div className="w-[calc(100%-3rem)] mx-auto mt-8 mb-6 lg:w-[calc(100%-9rem)]">
         <button className="border border-[#417F56] pt-2 pb-2 pr-4 pl-4 rounded-sm flex gap-2 text-[#417F56] cursor-pointer font-medium">
           <Image
             src="/icons/shopping-cart.png"
@@ -64,13 +64,6 @@ function Menu({ searchParams }) {
           <span>Complete the Purchase</span>
         </button>
       </div>
-      {/* <ul className="w-[calc(100%-9rem)] mx-auto grid grid-cols-2 gap-6 mb-12">
-        {paginatedMenu.map((item) => (
-          <li key={item.id}>
-            <MenuCard item={item} />
-          </li>
-        ))}
-      </ul> */}
       <MenuPage paginatedMenu={paginatedMenu} />
       <Pagination
         currentPage={currentPage}

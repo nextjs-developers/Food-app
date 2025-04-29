@@ -20,8 +20,8 @@ function SearchInput({ search }) {
   }, [searchValue, router]);
 
   return (
-    <div className="flex items-center justify-center">
-      <label className="input w-[400]">
+    <div className="flex items-center justify-end w-full">
+      <label className="input w-full lg:w-[400]">
         <svg
           className="h-[1em] opacity-50"
           xmlns="http://www.w3.org/2000/svg"

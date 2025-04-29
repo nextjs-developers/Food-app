@@ -13,17 +13,21 @@ function MenuCard({ item, onClick }) {
     setLiked((liked) => !liked);
   };
 
+  const truncateString = (str, num) => {
+    return str.split(' ').slice(0, num).join(' ');
+}
+
   return (
     <div
-      className="card card-side bg-base-100 shadow-sm"
+      className="card card-side bg-base-100 border border-[#CBCBCB] lg:shadow-sm"
     >
-      <figure className="w-[169px] h-[174px]  cursor-pointer" onClick={onClick}>
+      <figure className="w-[130px] h-[150px]  cursor-pointer lg:w-[169px] lg:h-[174px]" onClick={onClick}>
         <img src={item.image} alt={item.title} />
       </figure>
-      <div className="card-body">
+      <div className="card-body h-[150] lg:h-[174px]">
         <div className="flex justify-between items-center">
-          <h2 className="card-title text-xl text-[#353535] font-semibold">
-            {item.title}
+          <h2 className="card-title text-xs text-[#353535] font-semibold lg:text-xl">
+            {truncateString(item.title, 3)}
           </h2>
           <button onClick={likeHandler} className="cursor-pointer">
             {liked ? <FcLike /> : <AiOutlineHeart />}
@@ -53,7 +57,7 @@ function MenuCard({ item, onClick }) {
             initialValue={rating}
             onChange={(newRating) => setRating(newRating)}
           />
-          <button className="btn bg-[#417F56] text-white font-medium w-[244px]">
+          <button className="btn bg-[#417F56] text-[10px] text-white font-medium w-[85px] lg:w-[104px] lg:text-sm 2xl:text-xl 2xl:w-[244px]">
             Add to Cart
           </button>
         </div>
