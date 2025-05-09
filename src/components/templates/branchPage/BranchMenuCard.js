@@ -1,9 +1,10 @@
 import Image from "next/image";
+
 const BranchMenuCard = ({data}) => {
+
 	return (
 		<div
-			className="flex flex-col w-[288px] h-fit rounded-lg overflow-hidden"
-			key={data.id}
+			className="flex bg-white flex-shrink-0 flex-col w-[288px] h-fit rounded-lg overflow-hidden shadow"
 		>
 			<Image
 				className="w-full h-[200px]"
