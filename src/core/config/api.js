@@ -8,9 +8,9 @@ import {
 
 const api = axios.create({
   baseURL: `https://tarkhineh-api.liara.run/`,
-  headers: {
-    "Content-Type": "application/json",
-  },
+  // headers: {
+  //   "Content-Type": "application/json",
+  // },
 });
 
 api.interceptors.request.use(

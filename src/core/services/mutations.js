@@ -12,7 +12,12 @@ const useCheckOtp = () => {
 
   const mutationFn = (data) => api.post("Authentication/verify-otp", data);
 
-
   return useMutation({ mutationFn });
 };
-export { useSendOtp, useCheckOtp };
+
+const useRequestFranchise = () => {
+  const mutationFn = (formData) => api.post("send-request", formData);
+  return useMutation({ mutationFn });
+};
+
+export { useSendOtp, useCheckOtp, useRequestFranchise };
