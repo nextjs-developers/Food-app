@@ -3,7 +3,7 @@ import { FaAngleRight, FaExpand } from "react-icons/fa6";
 import Image from "next/image";
 function BranchesCard({ branch, showImageHandler }) {
   return (
-    <div className="w-[380px] h-[80px] flex flex-row md:flex-col md:w-[300px] md:h-[380px] border border-[#cbcbcb] rounded-[8px] cursor-pointer shadow-accent-content relative overflow-hidden group hover:border-[#353535] hover:shadow-accent md:hover:min-h-56  md:hover:-mb-8 transition-all">
+    <div className="w-[380px] h-[80px]  flex flex-row md:flex-col md:w-[300px] md:h-[380px] border border-[#cbcbcb] rounded-[8px] cursor-pointer shadow-accent-content relative overflow-hidden group hover:border-[#353535] hover:shadow-accent md:hover:min-h-56  md:hover:-mb-8 transition-all">
       <figure
         className="relative cursor-pointer"
         onClick={() => showImageHandler(branch.img)}
