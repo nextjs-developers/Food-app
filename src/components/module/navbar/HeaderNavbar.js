@@ -74,21 +74,21 @@ const pathName = usePathname();
                   <li className="pb-[5px]">
                     <details open={activeMenu === "mobile-menu"}>
                       <summary onClick={(e) => handleToggle("mobile-menu", e)} className="flex  items-center justify-between">
-                     <div className="flex  items-center gap-[5px]"><LuNotepadText/>   Menu </div> <MdKeyboardArrowDown/>
+                      <div className="flex  items-center gap-[5px]"><LuNotepadText/><Link href="/menu">Menu</Link>   </div> <MdKeyboardArrowDown/>
                       </summary>
                       <ul className=" z-[30] w-[80%] space-y-1 divide-y divide-gray-300 border-none! rounded-none">
-                        <li>
-                          <Link href="/maindish"  className={` ${pathName === "/maindish" ? "text-success" : null}`}>Main Dish</Link>
-                        </li>
-                        <li>
-                          <Link href="/appertizer" className={`${pathName === "/appertizer" ? "text-success" : null}`}>Appetizer</Link>
-                        </li>
-                        <li>
-                          <Link href="/dessert" className={` ${pathName === "/dessert" ? "text-success" : null}`}>Dessert</Link>
-                        </li>
-                        <li>
-                          <Link href="/drink" className={` ${pathName === "/drink" ? "text-success" : null}`}>Drink</Link>
-                        </li>
+                      <li >
+                <Link href="/menu?category=mainCourse"  className={` ${pathName === '/menu?category=mainCourse' ? "text-success" : null}`}>Main Course</Link>
+                </li>
+                <li >
+                  <Link href="/menu?category=appetizers" className={`${pathName === "/menu?category=appetizers" ? "text-success" : null}`}>Appetizer</Link>
+                </li>
+                <li>
+                  <Link href="/menu?category=desserts"  className={`${pathName === "/menu?category=desserts" ? "text-success" : null}`}>Dessert</Link>
+                </li>
+                <li >
+                  <Link href="/menu?category=drinks" className={`${pathName === "/menu?category=drinks" ? "text-success" : null}`}>drink</Link>
+                </li>
                       </ul>
                     </details>
                   </li>
@@ -165,20 +165,20 @@ const pathName = usePathname();
                 className=" z-[30] focus:bg-transparent hover:border-b hover:border-[#417F56] hover:text-[#417F56] hover:bg-[color-mix(in_oklab,var(--color-base-content)_10%,transparent)] hover: bg-opacity-10 transition"
                 onClick={(e) => handleToggle("desktop-menu", e)}
               >
-                Menu
+               <Link href="/menu"> </Link> Menu
               </summary>
               <ul className="p-2 z-[30] w-[144px] divide-y divide-gray-300 bg-base-100 text-base-content rounded-t-none">
                 <li >
-                  <Link href="/maindish" className={`${pathName === "/maindish" ? "text-success" : null}`}>Main Dish</Link>
+                <Link href="/menu?category=mainCourse"  className={` ${pathName === '/menu?category=mainCourse' ? "text-success" : null}`}>Main Course</Link>
                 </li>
                 <li >
-                  <Link href="/appetizer" className={`${pathName === "/appetizer" ? "text-success" : null}`}>Appetizer</Link>
+                  <Link href="/menu?category=appetizers" className={`${pathName === "/menu?category=appetizers" ? "text-success" : null}`}>Appetizer</Link>
                 </li>
                 <li>
-                  <Link href="/dessert"  className={`${pathName === "/dessert" ? "text-success" : null}`}>Dessert</Link>
+                  <Link href="/menu?category=desserts"  className={`${pathName === "/menu?category=desserts" ? "text-success" : null}`}>Dessert</Link>
                 </li>
                 <li >
-                  <Link href="/drink" className={`${pathName === "/drink" ? "text-success" : null}`}>drink</Link>
+                  <Link href="/menu?category=drinks" className={`${pathName === "/menu?category=drinks" ? "text-success" : null}`}>drink</Link>
                 </li>
               </ul>
             </details>

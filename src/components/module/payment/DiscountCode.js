@@ -22,7 +22,7 @@ function DiscountCode() {
               <input
                 type="text"
                 placeholder="Discount Code"
-                className="input border md:w-[320px] w-[] border-[#e1e1e1]"
+                className="input border md:w-[320px]  border-[#e1e1e1]"
                 value={discountCode}
                 onChange={(e) => {
                   setDiscountCode(e.target.value);
