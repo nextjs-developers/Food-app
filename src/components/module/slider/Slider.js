@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -22,9 +22,9 @@ const Slider = () => {
     );
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]);
 
   useEffect(() => {
     if (!isHovered) {
@@ -34,7 +34,7 @@ const Slider = () => {
 
       return () => clearInterval(interval);
     }
-  }, [isHovered]);
+  }, [isHovered, nextSlide]);
 
   return (
     <div className="relative w-[100%] m-auto mt-4">

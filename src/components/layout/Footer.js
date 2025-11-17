@@ -11,7 +11,7 @@ const Footer = () => {
 			style={{ backgroundImage: `url(${footerImg.src})` }}
 		>
 			<div className="flex h-fit  my-12 2xl:gap-56 gap-36 ">
-				<ul className="text-lg flex flex-col gap-4 ">
+				<ul className="text-lg flex flex-col gap-4 text-white ">
 					<li className="first:text-2xl mb-2">Quick Access</li>
 					<li className="hover:text-[#417F56] transition-colors cursor-pointer">
 						FAQ
@@ -28,7 +28,7 @@ const Footer = () => {
 						<Image className="cursor-pointer" src={telegramLogo} alt="icon" />
 					</li>
 				</ul>
-				<ul className="text-lg flex flex-col gap-3.5">
+				<ul className="text-lg flex flex-col gap-3.5 text-white">
 					<li className="first:text-2xl mb-2">Mehmoni Branches</li>
 					<li className="hover:text-[#417F56] transition-colors cursor-pointer">
 						New York Branch
@@ -45,7 +45,7 @@ const Footer = () => {
 				</ul>
 			</div>
 			<div className="lg:grid hidden h-fit mt-12 grid-cols-2">
-				<h1 className="col-span-2 text-2xl mb-7">Message to Mehmoni</h1>
+				<h1 className="col-span-2 text-2xl mb-7 text-white">Message to Mehmoni</h1>
 				<div>
 					<div className="flex flex-col gap-3">
 						<input

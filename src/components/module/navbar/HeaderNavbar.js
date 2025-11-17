@@ -165,7 +165,7 @@ const pathName = usePathname();
                 className=" z-[30] focus:bg-transparent hover:border-b hover:border-[#417F56] hover:text-[#417F56] hover:bg-[color-mix(in_oklab,var(--color-base-content)_10%,transparent)] hover: bg-opacity-10 transition"
                 onClick={(e) => handleToggle("desktop-menu", e)}
               >
-               <Link href="/menu"> </Link> Menu
+               <Link href="./menu"> </Link> Menu
               </summary>
               <ul className="p-2 z-[30] w-[144px] divide-y divide-gray-300 bg-base-100 text-base-content rounded-t-none">
                 <li >

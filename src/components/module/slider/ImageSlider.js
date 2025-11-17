@@ -44,7 +44,7 @@ function ImageSlider({ selectedImage, setIsOpen }) {
                     currentIndex === index ? "ring-2 ring-[#e1e1e1]" : ""
                   }`}
                 >
-                  <img
+                  <Image
                     src={image}
                     alt={`Slide ${index + 1}`}
                     className="rounded-box md:h-24 md:w-24 h-14 w-14 object-cover cursor-pointer"
